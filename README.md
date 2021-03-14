@@ -1,5 +1,7 @@
 # voidnulll.github.io
 
+Personal site for VoidNulll
+
 ## Build Setup
 
 ```bash

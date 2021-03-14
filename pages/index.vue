@@ -12,6 +12,7 @@
         I see myself as a gamer, a person, and a developer. In that order.
         I primarily like to play online games, but will play single player games when in the mood. I like a lot of fast paced games, like shooters, as well as survival type games. Open world games are generally the most fun. I don’t really fit into a gaming profile.<br>
         I'm a hobbyist developer, I do this for fun. TypeScript is agreeable, and Python has pleasurable syntax... However, Java is just a pain no matter what I do, I prefer not to use java. I do most of my development on Github now, and primarily use either TypeScript or JavaScript.
+        <br>I also do that sysadmin thing on my own server hosting some of my projects, nothing serious.
         One last bit before I end this, I can enjoy Linux as a server/dev environment.
         <br>Psst, Node is not a be all end all. Neither is any framework, especially frontend ones.
       </p>
@@ -46,7 +47,7 @@
               :key="project.name"
               class="mt-4 text-center"
             >
-              <a v-if="project.url" :href="project.url" class="text-url-dark underline hover:text-white text-2xl">{{ project.name }}</a>
+              <a v-if="project.url" :href="project.url" class="text-url-dark underline text-2xl">{{ project.name }}</a>
               <p v-if="!project.url" class="text-url-dark hover:text-white text-2xl">
                 {{ project.name }}
               </p>

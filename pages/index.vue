@@ -13,7 +13,7 @@
         I primarily like to play online games, but will play single player games when in the mood. I like a lot of fast paced games, like shooters, as well as survival type games (although I prefer those to be online). Open world games are generally the most fun. I don’t really fit into a gaming profile. So lets move on to developer.
         I am by no means certified in any way, however that doesn’t mean I do not enjoy this, at times. I enjoy Pythons syntax and can usually agree with TypeScript but Java is just a pain no matter what I do, therefore I do not use Java, and I prefer not to. I have yet to really use Python. I do most of my development on Github, and primarily use either TypeScript or JavaScript.
         One last bit before I end this, I can enjoy Linux but most of the time its just infuriating.
-        <br>Psst, Node is not a be and end all. Neither is any framework, especially frontend ones.
+        <br>Psst, Node is not a be all end all. Neither is any framework, especially frontend ones.
       </p>
       <p class="text-white max-w-screen-sm md:max-w-screen-md mt-4 text-md lg:text-xl">
         See an issue with this site? <a class="text-url-dark underline text-lg" href="https://github.com/VoidNulll/VoidNulll/issues/new?assignees=VoidNulll&template=bug_report.md">Submit a bug report.</a>

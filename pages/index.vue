@@ -1,13 +1,13 @@
 <template>
   <div class="lg:flex lg:flex-wrap cont mx-2 md:ml-14 md:mt-10 md:mx-0 mb-5 md:mb-2">
     <div class="text-highlight-dark">
-      <p class="text-4xl subtitle">
-        What do you desire?
+      <p class="text-xl md:text-2xl lg:text-4xl subtitle">
+        What do you truly desire?
       </p>
-      <h1 class="text-6xl font-bold">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">
         Oh, you want to know about me?
       </h1>
-      <p class="text-white max-w-screen-sm md:max-w-screen-md mt-4 text-xl">
+      <p class="text-white max-w-screen-sm md:max-w-screen-md mt-4 text-md md:text-xl">
         This’ll be, interesting. Hope you like it.
         I see myself as a gamer, a person, and a developer. In that order.
         I primarily like to play online games, but will play single player games when in the mood. I like a lot of fast paced games, like shooters, as well as survival type games (although I prefer those to be online). Open world games are generally the most fun. I don’t really fit into a gaming profile. So lets move on to developer.
@@ -35,7 +35,7 @@
             </li>
           </ul>
         </div>
-        <div class="lg:m-7 mx-0 text-highlight-dark bg-primary-dark pt-4 p-2 h-64 lg:pb-10 lg:h-auto w-72">
+        <div class="sm:mx-4 lg:m-7 mx-0 text-highlight-dark bg-primary-dark pt-4 p-2 h-64 lg:pb-10 lg:h-auto w-72">
           <h1 class="text-3xl font-bold text-center">
             Projects
           </h1>

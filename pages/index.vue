@@ -21,7 +21,7 @@
       </p>
     </div>
     <div class="block bg-none">
-      <div class="mx-4 lg:mx-0 lg:ml-96 mt-3 lg:mt-2 text-highlight-dark sm:flex lg:block">
+      <div class="ml-4 lg:mx-0 lg:ml-96 mt-3 lg:mt-2 text-highlight-dark sm:flex lg:block">
         <div class="lg:m-7 mx-0 pt-4 lg:pb-10 bg-primary-dark border-right border-r-4 border-dark lg:border-none h-64 lg:h-auto w-72">
           <h1 class="text-3xl font-bold text-center">
             Organizations

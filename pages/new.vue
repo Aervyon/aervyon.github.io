@@ -1,6 +1,6 @@
 <template>
   <div id="content" class="mt-10 xl:mt-28">
-    <p class="ml-2 md:ml-14 mb-4 md:mb-16 2xl:mb-32 font-bold text-highlight-dark text-3xl md:text-4xl lg:text-5xl">
+    <p class="ml-8 md:ml-14 mb-4 md:mb-16 2xl:mb-32 font-bold text-highlight-dark text-3xl md:text-4xl lg:text-5xl">
       Error 404: Title not found
     </p>
     <div class="ml-24 md:ml-14 md:mx-0">
@@ -14,7 +14,7 @@
           </a>
         </div>
         <svg
-          class="ml-8 md:ml-20 2xl:w-72"
+          class="ml-10 md:ml-20 2xl:w-72"
           width="7rem"
           viewBox="0 0 208 334"
           fill="none"

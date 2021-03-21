@@ -14,7 +14,7 @@
           </a>
         </div>
         <svg
-          class="ml-4 md:mx-0 md:ml-20 2xl:w-72"
+          class="ml-8 md:ml-20 2xl:w-72"
           width="7rem"
           viewBox="0 0 208 334"
           fill="none"

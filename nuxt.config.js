@@ -4,6 +4,11 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+    script: [
+      {
+        src: 'https://code.iconify.design/1/1.0.7/iconify.min.js'
+      }
+    ],
     title: 'VoidNull - Whoami?',
     htmlAttrs: {
       lang: 'en'
@@ -53,5 +58,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  tailwindcss: {
+    jit: true
   }
 }

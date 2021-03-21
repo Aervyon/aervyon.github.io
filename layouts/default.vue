@@ -1,26 +1,8 @@
 <template class="bg-dark">
   <div class="h-screen flex flex-col">
-    <div class="static top-0 flex bg-primary-dark p-4">
-      <a class="font-bold ml-5 uppercase whitespace-nowrap text-highlight-dark text-xl" href="/">
-        VoidNulll
-      </a>
-      <div>
-        <ul class="flex">
-          <li
-            v-for="goto in urls"
-            :key="goto.title"
-            class="ml-4 text-white text-md pl-3"
-          >
-            <a :href="goto.url">
-              {{ goto.title }}
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
     <Nuxt class="flex-grow" />
-    <div class="flex bg-primary-dark p-4 pin-b">
-      <h1 class="text-accent">
+    <div class="flex bg-primary-dark p-2 pin-b">
+      <h1 class="text-accent text-sm">
         &copy; {{ new Date().getFullYear() }} VoidNulll
       </h1>
     </div>

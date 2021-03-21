@@ -1,5 +1,5 @@
 <template>
-  <div id="content" class="ml-32 mt-10 md:ml-14 xl:mt-28 md:mx-0">
+  <div id="content" class="ml-24 mt-10 md:ml-14 xl:mt-28 md:mx-0">
     <p class="mb-4 md:mb-16 2xl:mb-32 font-bold text-highlight-dark text-4xl lg:text-6xl 2xl:text-7xl">
       Error 404: Title not found
     </p>

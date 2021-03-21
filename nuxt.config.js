@@ -9,7 +9,7 @@ export default {
         src: 'https://code.iconify.design/1/1.0.7/iconify.min.js'
       }
     ],
-    title: 'VoidNull - whoami',
+    title: 'VoidNull - $ whoami',
     htmlAttrs: {
       lang: 'en'
     },
@@ -19,7 +19,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'VoidNulll - developer, gamer, person? Maybe...' },
+      { hid: 'description', name: 'description', content: '$ whoami\nnull\nprogrammer, gamer, ...? Maybe more...' },
       { name: 'og:image', content: '/VN.png' },
       { name: 'theme-color', content: '#0EB363' }
     ],

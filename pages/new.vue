@@ -4,7 +4,7 @@
       Error 404: Title not found
     </p>
     <div class="block md:flex">
-      <div class="place-self-center flex md:block mx-16 text-3xl lg:text-6xl">
+      <div class="place-self-center flex md:block mx-16 text-3xl lg:text-4xl">
         <a href="https://github.com/VoidNulll" class="mb-5 text-url-dark hover:text-accent">
           <span class="iconify" data-icon="akar-icons:github-fill" data-inline="false" />
         </a>
@@ -67,7 +67,7 @@
           </linearGradient>
         </defs>
       </svg>
-      <div class="block md:flex ml-4 md:ml-20 mt-10 md:place-self-center text-2xl lg:text-4xl 2xl:text-5xl">
+      <div class="block md:flex ml-4 md:ml-20 mt-10 md:place-self-center text-2xl lg:text-4xl">
         <div class="mb-2">
           <a class="text-url-dark border-2 2xl:border-4 border-highlight-dark p-1 place-self-center px-4 text-center" href="https://shutplea.se">Programmer</a>
         </div>

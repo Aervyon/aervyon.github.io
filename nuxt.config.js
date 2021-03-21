@@ -19,7 +19,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '$ whoami\nnull\nprogrammer, gamer, ...? Maybe more...' },
+      { hid: 'description', name: 'description', content: 'voidnulll\nprogrammer, gamer, ...? Maybe more...' },
       { name: 'og:image', content: '/VN.png' },
       { name: 'theme-color', content: '#0EB363' }
     ],

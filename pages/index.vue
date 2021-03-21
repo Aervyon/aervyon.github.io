@@ -28,7 +28,7 @@
         </h1>
         <p class="text-white max-w-screen-sm md:max-w-screen-md mt-4 text-md lg:text-xl">
           Ok then.<br>
-          I see myself as a gamer, a person, and a developer. In that order.
+          I see myself as a gamer, and a developer. In that order.
           I primarily like to play online games, but will play single player games when in the mood. I like a lot of fast paced games, like shooters, as well as survival type games. Open world games are generally the most fun. I don’t really fit into a gaming profile.<br>
           I'm a hobbyist developer, I do this for fun. TypeScript is agreeable, and Python has pleasurable syntax... However, Java is just a pain no matter what I do, I prefer not to use java. I do most of my development on Github now, and primarily use either TypeScript or JavaScript.
           <br>I also do that sysadmin thing on my own server hosting some of my projects, nothing serious.

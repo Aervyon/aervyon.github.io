@@ -1,9 +1,9 @@
 <template>
-  <div id="content">
-    <p class="mb-4 md:mb-16 2xl:mb-32 font-bold text-highlight-dark text-3xl md:text-4xl lg:text-5xl">
+  <div id="content" class="mt-10 xl:mt-28">
+    <p class="md: ml-14 mb-4 md:mb-16 2xl:mb-32 font-bold text-highlight-dark text-3xl md:text-4xl lg:text-5xl">
       Error 404: Title not found
     </p>
-    <div class="ml-24 mt-10 md:ml-14 xl:mt-28 md:mx-0">
+    <div class="ml-24 md:ml-14 md:mx-0">
       <div class="block md:flex">
         <div class="place-self-center flex md:block mx-16 text-3xl lg:text-4xl">
           <a href="https://github.com/VoidNulll" class="mb-5 text-url-dark hover:text-accent">

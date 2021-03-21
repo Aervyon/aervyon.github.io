@@ -1,10 +1,10 @@
 <template>
   <div id="content" class="ml-32 mt-10 md:ml-14 xl:mt-28 md:mx-0">
-    <p class="mb-4 md:mb-16 font-bold text-highlight-dark text-4xl">
+    <p class="mb-4 md:mb-16 2xl:mb-32 font-bold text-highlight-dark text-4xl lg:text-6xl 2xl:text-7xl">
       Error 404: Title not found
     </p>
     <div class="block md:flex">
-      <div class="place-self-center flex md:block mx-16 text-3xl">
+      <div class="place-self-center flex md:block mx-16 text-3xl lg:text-6xl">
         <a href="https://github.com/VoidNulll" class="mb-5 text-url-dark hover:text-accent">
           <span class="iconify" data-icon="akar-icons:github-fill" data-inline="false" />
         </a>
@@ -13,7 +13,7 @@
         </a>
       </div>
       <svg
-        class="mx-5 md:mx-0 md:ml-20"
+        class="mx-5 md:mx-0 md:ml-20 md:w-96"
         width="10rem"
         viewBox="0 0 208 334"
         fill="none"
@@ -67,12 +67,12 @@
           </linearGradient>
         </defs>
       </svg>
-      <div class="block md:flex ml-4 md:ml-20 mt-10 md:place-self-center text-2xl">
+      <div class="block md:flex ml-4 md:ml-20 mt-10 md:place-self-center text-2xl lg:text-4xl 2xl:text-5xl">
         <div class="mb-2">
-          <a class="text-url-dark border-2 border-highlight-dark p-1 place-self-center px-4 text-center" href="https://shutplea.se">Programmer</a>
+          <a class="text-url-dark border-2 2xl:border-4 border-highlight-dark p-1 place-self-center px-4 text-center" href="https://shutplea.se">Programmer</a>
         </div>
         <div class="mt-8 md:mt-0 w-full">
-          <a class="text-url-dark border-2 border-highlight-dark p-1 place-self-center px-[2.85rem] md:ml-6 text-center" href="https://shutplea.se">Gamer</a>
+          <a class="text-url-dark border-2 2xl:border-4 border-highlight-dark p-1 place-self-center px-[2.85rem] md:ml-6 text-center" href="https://shutplea.se">Gamer</a>
         </div>
       </div>
     </div>
@@ -112,7 +112,6 @@ body {
 
 @media screen and (min-width: 1920px) {
   body {
-    background-image: url("/circles.svg");
     background-size: 40rem;
     background-position: 100% 100%;
     background-repeat: no-repeat;

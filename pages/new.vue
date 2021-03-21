@@ -1,20 +1,20 @@
 <template>
-  <div id="content" class="mx-2 ml-2 mt-4 md:ml-14 xl:mt-28 md:mx-0">
-    <p class="mb-4 md:mb-16 font-bold text-highlight-dark">
+  <div id="content" class="ml-32 ml-2 mt-10 md:ml-14 xl:mt-28 md:mx-0">
+    <p class="mb-4 md:mb-16 font-bold text-highlight-dark text-4xl">
       Insert title plz
     </p>
     <div class="block md:flex">
-      <div class="place-self-center flex md:block mx-10">
-        <a href="https://github.com/VoidNulll" class="text-center text-3xl mb-5 text-url-dark hover:text-accent">
+      <div class="place-self-center flex md:block mx-16 text-3xl">
+        <a href="https://github.com/VoidNulll" class="mb-5 text-url-dark hover:text-accent">
           <span class="iconify" data-icon="akar-icons:github-fill" data-inline="false" />
         </a>
-        <a href="https://twitter.com/VoidNulll0515" class="text-3xl ml-2 text-url-dark hover:text-accent">
+        <a href="https://twitter.com/VoidNulll0515" class="ml-2 text-url-dark hover:text-accent">
           <span class="iconify" data-icon="akar-icons:twitter-fill" data-inline="false" />
         </a>
       </div>
       <svg
         class="mx-5 md:mx-0 md:ml-20"
-        width="100"
+        width="10rem"
         viewBox="0 0 208 334"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -67,12 +67,12 @@
           </linearGradient>
         </defs>
       </svg>
-      <div class="block md:flex ml-4 md:ml-20 mt-10 md:place-self-center">
-        <div>
+      <div class="block md:flex ml-4 md:ml-20 mt-10 md:place-self-center text-2xl">
+        <div class="mb-2">
           <a class="text-url-dark border-2 border-highlight-dark p-1 place-self-center px-4 text-center" href="/#programmer">Programmer</a>
         </div>
-        <div class="mt-4 md:mt-0 w-full">
-          <a class="text-url-dark border-2 border-highlight-dark p-1 place-self-center px-9 md:ml-6 text-center" href="/#gamer">Gamer</a>
+        <div class="mt-8 md:mt-0 w-full">
+          <a class="text-url-dark border-2 border-highlight-dark p-1 place-self-center px-[2.85rem] md:ml-6 text-center" href="/#gamer">Gamer</a>
         </div>
       </div>
     </div>
@@ -110,19 +110,19 @@ body {
   background-repeat: no-repeat;
 }
 
-@media screen and (width: 1080px) {
+@media screen and (min-width: 1920px) {
   body {
     background-image: url("/circles.svg");
-    background-size: 20rem;
+    background-size: 40rem;
     background-position: 100% 100%;
     background-repeat: no-repeat;
   }
 }
 
-@media screen and (width: 1440px) {
+@media screen and (min-width: 2560px) {
   body {
     background-image: url("/circles.svg");
-    background-size: 40rem;
+    background-size: 60rem;
     background-position: 100% 100%;
     background-repeat: no-repeat;
   }

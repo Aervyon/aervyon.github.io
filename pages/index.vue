@@ -97,6 +97,16 @@ export default {
         {
           name: 'Wastelander One Cogs (WIP)'
         }
+      ],
+      urls: [
+        {
+          title: 'github',
+          url: 'https://github.com/VoidNulll'
+        },
+        {
+          title: 'twitter',
+          url: 'https://twitter.com/VoidNulll0515'
+        }
       ]
     }
   }

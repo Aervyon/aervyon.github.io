@@ -1,7 +1,7 @@
 <template>
-  <div id="content" class="ml-32 ml-2 mt-10 md:ml-14 xl:mt-28 md:mx-0">
+  <div id="content" class="ml-32 mt-10 md:ml-14 xl:mt-28 md:mx-0">
     <p class="mb-4 md:mb-16 font-bold text-highlight-dark text-4xl">
-      Insert title plz
+      Error 404: Title not found
     </p>
     <div class="block md:flex">
       <div class="place-self-center flex md:block mx-16 text-3xl">
@@ -69,10 +69,10 @@
       </svg>
       <div class="block md:flex ml-4 md:ml-20 mt-10 md:place-self-center text-2xl">
         <div class="mb-2">
-          <a class="text-url-dark border-2 border-highlight-dark p-1 place-self-center px-4 text-center" href="/#programmer">Programmer</a>
+          <a class="text-url-dark border-2 border-highlight-dark p-1 place-self-center px-4 text-center" href="https://shutplea.se">Programmer</a>
         </div>
         <div class="mt-8 md:mt-0 w-full">
-          <a class="text-url-dark border-2 border-highlight-dark p-1 place-self-center px-[2.85rem] md:ml-6 text-center" href="/#gamer">Gamer</a>
+          <a class="text-url-dark border-2 border-highlight-dark p-1 place-self-center px-[2.85rem] md:ml-6 text-center" href="https://shutplea.se">Gamer</a>
         </div>
       </div>
     </div>

@@ -24,8 +24,7 @@ module.exports = {
         'highlight-dark': '#568A97',
         'url-dark': '#0EB363',
         accent: '#B9F5D8'
-      },
-      textColor: false
+      }
     }
   },
   variants: {

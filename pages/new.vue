@@ -1,9 +1,12 @@
 <template>
   <div id="content" class="mt-10 xl:mt-28">
-    <p class="ml-4 md:ml-14 mb-4 md:mb-16 2xl:mb-32 font-bold text-highlight-dark text-3xl md:text-4xl lg:text-5xl">
-      Error 404: Title not found
+    <div class="mx-4 md:mx-0 md:ml-14 font-bold text-highlight-dark text-3xl md:text-4xl lg:text-5xl">
+      <h1>VoidNull (or VoidNulll)</h1>
+    </div>
+    <p class="ml-4 md:ml-14 mb-4 md:mb-16 2xl:mb-32 font-bold text-gray-400 text-lg md:text-xl lg:text-2xl">
+      Young programmer, gamer, and maybe more?
     </p>
-    <div class="ml-24 md:ml-14 md:mx-0">
+    <div id="hero" class="ml-24 md:ml-14 md:mx-0">
       <div class="block md:flex">
         <div class="place-self-center flex md:block mx-16 text-3xl lg:text-4xl">
           <a href="https://github.com/VoidNulll" class="mb-5 text-url-dark hover:text-accent">
@@ -70,13 +73,33 @@
         </svg>
         <div class="block md:flex ml-4 md:ml-20 mt-10 md:place-self-center text-2xl lg:text-4xl">
           <div class="mb-2">
-            <a class="text-url-dark border-2 2xl:border-4 border-highlight-dark p-1 place-self-center px-4 text-center" href="https://shutplea.se">Programmer</a>
+            <a class="text-url-dark border-2 2xl:border-4 border-highlight-dark p-1 place-self-center px-4 text-center" href="#programmer">Programmer</a>
           </div>
           <div class="mt-8 md:mt-0 w-full">
-            <a class="text-url-dark border-2 2xl:border-4 border-highlight-dark p-1 place-self-center px-[2.85rem] md:ml-6 text-center" href="https://shutplea.se">Gamer</a>
+            <a class="text-url-dark border-2 2xl:border-4 border-highlight-dark p-1 place-self-center px-[2.85rem] md:ml-6 text-center" href="#gamer">Gamer</a>
           </div>
         </div>
       </div>
+    </div>
+    <h1 id="programmer" class="text-highlight-dark text-2xl xl:text-3xl mx-4 md:mx-0 md:ml-14 mb-6">
+      Want to learn more about <em>what</em> I program?<br>I'll tell you...
+    </h1>
+    <div class="text-md mb-14 ml-4 md:ml-14 md:mx-0 lg:max-w-screen-md xl:max-w-screen-lg xl:text-xl text-gray-400">
+      <p>
+        I primarily work with TypeScript and JavaScript (when necessary or TypeScript is unnecessary)<br>I'm venturing into Python, as it's something new, interesting, and its syntax is straight forward enough.<br>I am not a fan of Java. It does not make sense to me, at all.<br>In the future I may venture into Rust or Golang or another compiled language.<br>Here's a list of the JS/TS frameworks & libraries I have used, along with my experience level.
+        <ul class="mb-4">
+          <li
+            v-for="jstech in technologies.js"
+            :key="jstech.name"
+            class="ml-4"
+          >
+            - <a :href="jstech.link" class="text-url-dark underline">
+              {{ jstech.name }}
+            </a> - {{ jstech.experience }}
+          </li>
+        </ul>
+        I have done some sysadmin things, but they aren't too important or much. <br>Here are some examples: Managing configs for sshd, ufw, certbot, nginx. Installing packages like Node, MongoDB, etc.<br>Basically what everyone does in Linux.
+      </p>
     </div>
   </div>
 </template>
@@ -99,33 +122,40 @@ export default {
         {
           name: 'Wastelander One Cogs (WIP)'
         }
-      ]
+      ],
+      technologies: {
+        js: [
+          { name: 'TypeScript', link: 'https://www.typescriptlang.org', experience: 'I\'m not sure actually' },
+          { name: 'Node.js', link: 'https://nodejs.org', experience: 'I\'m not quite sure, however of my JS projects are in Node.js' },
+          { name: 'Express', link: 'expressjs.com', experience: 'I have decent experience writing routes, managing auth, rendering pages, and configuring express servers' },
+          { name: 'Mongoose (MongoDB Driver)', link: 'https://mongoosejs.com', experience: 'I have experience writing and interacting with models in Mongoose.' },
+          { name: 'Vue', link: 'https://vuejs.org/', experience: 'I am very new to Vue.' },
+          { name: 'NuxtJS', link: 'https://nuxtjs.org/', experience: 'I have experience with making statically generated sites. This site is a static site made in NuxtJS.' }
+        ]
+      }
     }
   }
 }
 </script>
 <style>
-body {
+#hero {
   background-image: url("/circles.svg");
   background-size: 20rem;
   background-position: 100% 100%;
   background-repeat: no-repeat;
+  min-height: 70vh;
 }
 
 @media screen and (min-width: 1920px) {
-  body {
+  #hero {
     background-size: 40rem;
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
   }
 }
 
 @media screen and (min-width: 2560px) {
-  body {
-    background-image: url("/circles.svg");
+  #hero {
     background-size: 60rem;
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
+    min-height: 75.5vh
   }
 }
 

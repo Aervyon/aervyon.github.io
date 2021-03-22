@@ -98,7 +98,8 @@
             </a> - {{ jstech.experience }}
           </li>
         </ul>
-        I have done some sysadmin things, but they aren't too important or much. <br>Here are some examples: Managing configs for sshd, ufw, certbot, nginx. Installing packages like Node, MongoDB, etc.<br>Basically what everyone does in Linux.
+        I have done some sysadmin things, but they aren't too important or much. <br>Here are some examples: Managing configs for sshd, ufw, certbot, nginx. Installing packages like Node, MongoDB, etc.<br>Basically what everyone does in Linux based operating systems.<br>
+        I do not think Linux operating systems makes a good desktop OS for most people, and can't recommend it as a desktop OS.
       </p>
     </div>
   </div>

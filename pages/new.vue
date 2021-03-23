@@ -102,11 +102,11 @@
         I do not think Linux operating systems makes a good desktop OS for most people, and can't recommend it as a desktop OS.
       </p>
     </div>
-    <h1 id="gamer" class="text-highlight-dark text-2xl xl:text-3xl mx-4 md:mx-0 md:ml-14 mb-6">
+    <h1 id="gamer" class="text-highlight-dark text-2xl xl:text-3xl mx-4 md:mx-0 md:ml-14 2xl:ml-0 2xl:mr-14 mb-6 2xl:text-right">
       I think it needs to be stated for the record<br>I love playing games.
     </h1>
-    <div class="text-md mb-14 ml-4 md:ml-14 md:mx-0 lg:max-w-screen-md xl:max-w-screen-lg xl:text-xl text-gray-400">
-      <p>
+    <div class="text-md mb-14 ml-4 md:ml-14 md:mx-0 xl:text-xl text-gray-400 2xl:text-right 2xl:ml-[calc(100vw-68.5rem)]">
+      <p class="lg:max-w-screen-md xl:max-w-screen-lg">
         I'm a PC enthusiast, I play a lot of games primarily on PC. <em>That doesn't mean I hate consoles</em> I actually quite like consoles, I just find them to be an inconvience at times, however it doesn't help that I have a very last-gen console.<br>I play a wide variety of games, though not as much variety as others.<br>Sanboxes? Check. Role playing games? check.<br>Survival games? Definitely, those are very fun and sometimes even challenging I dare say.<br>Racing games? Check, although they can get boring.<br>I do enjoy cooperative (or co-op competitive) games a lot, however I do not like online-only games.
       </p>
     </div>

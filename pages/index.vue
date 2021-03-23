@@ -160,27 +160,13 @@ export default {
   min-height: 70vh;
 }
 
-@media screen and (min-width: 640px) {
-  #hero {
-    background-size: 20rem;
-    min-height: 74vh
-  }
-}
-
-@media screen and (min-width: 400px) {
-  #hero {
-    background-size: 20rem;
-    min-height: 74vh
-  }
-}
-
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
   #hero {
     background-size: 40rem;
   }
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2560px) and (min-height: 1440px) {
   #hero {
     background-size: 60rem;
     min-height: 75.5vh

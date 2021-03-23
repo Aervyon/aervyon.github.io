@@ -162,14 +162,14 @@ export default {
 
 @media screen and (min-width: 640px) {
   #hero {
-    background-size: 60rem;
+    background-size: 20rem;
     min-height: 74vh
   }
 }
 
 @media screen and (min-width: 400px) {
   #hero {
-    background-size: 60rem;
+    background-size: 20rem;
     min-height: 74vh
   }
 }

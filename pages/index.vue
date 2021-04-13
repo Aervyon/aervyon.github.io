@@ -9,10 +9,10 @@
     <div id="hero" class="ml-24 md:ml-14 md:mx-0">
       <div class="block md:flex">
         <div class="place-self-center flex md:block mx-16 text-3xl lg:text-4xl">
-          <a href="https://github.com/VoidNulll" class="mb-5 text-url-dark hover:text-accent">
+          <a href="https://github.com/VoidNulll" class="mb-5 text-url-dark hover:text-accent" aria-label="GitHub Profile">
             <span class="iconify" data-icon="akar-icons:github-fill" data-inline="false" />
           </a>
-          <a href="https://twitter.com/VoidNulll0515" class="ml-2 text-url-dark hover:text-accent">
+          <a href="https://twitter.com/VoidNulll0515" class="ml-2 text-url-dark hover:text-accent" aria-label="Twitter Profile">
             <span class="iconify" data-icon="akar-icons:twitter-fill" data-inline="false" />
           </a>
         </div>

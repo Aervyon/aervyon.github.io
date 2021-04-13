@@ -82,39 +82,42 @@
         </div>
       </div>
     </div>
-    <h1 id="programmer" class="text-highlight-dark text-2xl xl:text-3xl mx-4 md:mx-0 md:ml-14 mb-6">
-      Want to learn more about <em>what</em> I program?<br>I'll tell you...
-    </h1>
-    <div class="text-md mb-14 ml-4 md:ml-14 md:mx-0 lg:max-w-screen-md xl:max-w-screen-lg xl:text-xl text-gray-400">
+    <div class="text-md mb-7 ml-4 lg:max-w-screen-md xl:max-w-screen-lg xl:text-xl text-gray-400 mx-4 md:mx-0 md:ml-14">
+      <h1 id="programmer" class="text-highlight-dark text-2xl xl:text-3xl">
+        Want to learn more about what I program?<br>I'll tell you...
+      </h1>
       <p>
         I primarily work with TypeScript and JavaScript (when necessary or TypeScript is unnecessary)<br>
         <span class="text-accent">I'm venturing into Python, as it's something new, interesting, and its syntax is straight forward enough.</span>
         <br>I am not a fan of Java. It does not make sense to me, at all.
         <br>In the future I may venture into Rust or Golang or another compiled language.
         <br>Here's a list of the JS/TS frameworks & libraries I have used, along with my experience level.
-        <ul class="mb-4">
-          <li
-            v-for="jstech in technologies.js"
-            :key="jstech.name"
-            class="ml-4"
-          >
-            - <a :href="jstech.link" class="text-url-dark underline">
-              {{ jstech.name }}
-            </a> - {{ jstech.experience }}
-          </li>
-        </ul>
+      </p>
+      <ul class="mb-4">
+        <li
+          v-for="jstech in technologies.js"
+          :key="jstech.name"
+          class="ml-4"
+        >
+          - <a :href="jstech.link" class="text-url-dark underline">
+            {{ jstech.name }}
+          </a> - {{ jstech.experience }}
+        </li>
+      </ul>
+      <p>
         I have done some sysadmin things, but they aren't too important or much. <br>Here are some examples: Managing configs for sshd, ufw, certbot, nginx. Installing packages like Node, MongoDB, etc.<br>Basically what everyone does in Linux based operating systems.<br>
         <span class="text-accent">I do not think Linux operating systems makes a good desktop OS for most people, and can't recommend it as a desktop OS.</span>
       </p>
     </div>
-    <h1 id="gamer" class="text-highlight-dark text-2xl xl:text-3xl mx-4 md:mx-0 md:ml-14 2xl:ml-0 2xl:mr-14 mb-6 2xl:text-right">
-      I think it needs to be stated for the record<br>I love playing games.
-    </h1>
-    <div class="text-md mb-14 ml-4 md:ml-14 md:mx-0 xl:text-xl text-gray-400 2xl:ml-[calc(100vw-68.5rem)]">
+    <hr class="border-accent">
+    <section class="text-md mb-14 mt-7 ml-4 md:ml-14 md:mx-0 xl:text-xl text-gray-400 2xl:ml-[calc(100vw-68.5rem)]">
+      <h1 id="gamer" class="text-highlight-dark text-2xl xl:text-3xl 2xl:mr-14 mb-6 2xl:text-right">
+        I think it needs to be stated for the record<br>I love playing games.
+      </h1>
       <p class="lg:max-w-screen-md xl:max-w-screen-lg">
         <span class="text-accent">I'm a PC enthusiast, I play a lot of games primarily on PC. <em>That doesn't mean I hate consoles.</em> I actually quite like consoles</span><br>I just find them to be an inconvience at times, however it doesn't help that I have a very last-gen console.<br>I play a wide variety of games, though not as much variety as others.<br><span class="text-accent">Sanboxes?</span> Check. <span class="text-accent">Role playing games?</span> check.<br><span class="text-accent">Survival games?</span> Definitely, those are very fun and sometimes even challenging I dare say.<br><span class="text-accent">Racing games?</span> Check, although they can get boring.<br>I do enjoy <span class="text-accent">cooperative (or co-op competitive)</span> games a lot, however I do not like online-only games.
       </p>
-    </div>
+    </section>
   </div>
 </template>
 

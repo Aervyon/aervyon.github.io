@@ -5,8 +5,10 @@
       <h1 class="text-accent text-md lg:text-xl">
         &copy; {{ new Date().getFullYear() }} VoidNulll
       </h1>
-      <a class="ml-4 text-url-dark" href="https://github.com/VoidNulll/VoidNulll/issues/new?assignees=VoidNulll&template=bug_report.md">Submit Bug Report</a>
-      <a class="ml-4 text-url-dark" href="https://github.com/VoidNulll/VoidNulll/issues/new?labels=enhancement&template=site-suggestion.md">Submit Site Suggestion</a>
+      <div class="float-right max-w-sm md:absolute md:right-8" aria-label="links">
+        <a class="ml-4 text-url-dark" href="https://github.com/VoidNulll/VoidNulll/issues/new?assignees=VoidNulll&template=bug_report.md">Submit Bug Report</a>
+        <a class="ml-4 text-url-dark" href="https://github.com/VoidNulll/VoidNulll/issues/new?labels=enhancement&template=site-suggestion.md">Submit Site Suggestion</a>
+      </div>
     </footer>
   </div>
 </template>

@@ -26,6 +26,6 @@
     "eslint": "^7.27.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.10.0",
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^2.1.3"
   }
 }

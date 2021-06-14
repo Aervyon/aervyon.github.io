@@ -13,7 +13,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "core-js": "^3.13.1",
+    "core-js": "^3.14.0",
     "nuxt": "^2.15.6",
     "postcss-nested": "^5.0.5"
   },

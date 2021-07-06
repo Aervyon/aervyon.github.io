@@ -1,6 +1,6 @@
 <template>
   <div id="content" class="mt-10 xl:mt-28">
-    <div class="mx-4 md:mx-0 md:ml-14 font-bold text-highlight-dark text-3xl md:text-4xl lg:text-5xl">
+    <div class="mx-4 md:mx-0 md:ml-14 font-bold text-highlight-dark text-3xl md:text-4xl lg:text-5xl animate-fadeIn">
       <h1>VoidNull (or VoidNulll)</h1>
     </div>
     <p class="ml-4 md:ml-14 mb-4 md:mb-16 2xl:mb-32 font-bold text-gray-400 text-lg md:text-xl lg:text-2xl">
@@ -82,7 +82,7 @@
         </div>
       </div>
     </div>
-    <div class="text-md mb-7 ml-4 lg:max-w-screen-md xl:max-w-screen-lg xl:text-xl text-gray-400 mx-4 md:mx-0 md:ml-14">
+    <div data-aos-duration="1000" data-aos="zoom-in-up" class="text-md mb-7 ml-4 lg:max-w-screen-md xl:max-w-screen-lg xl:text-xl text-gray-400 mx-4 md:mx-0 md:ml-14">
       <h1 id="programmer" class="text-highlight-dark text-2xl xl:text-3xl">
         Want to learn more about what I program?<br>I'll tell you...
       </h1>
@@ -110,7 +110,7 @@
       </p>
     </div>
     <hr class="border-accent">
-    <section class="text-md mb-14 mt-7 ml-4 md:ml-14 md:mx-0 xl:text-xl text-gray-400 2xl:ml-[calc(100vw-68.5rem)]">
+    <section data-aos-duration="1000" data-aos="zoom-in-up" class="text-md mb-14 mt-7 ml-4 md:ml-14 md:mx-0 xl:text-xl text-gray-400 2xl:ml-[calc(100vw-68.5rem)]">
       <h1 id="gamer" class="text-highlight-dark text-2xl xl:text-3xl 2xl:mr-14 mb-6 2xl:text-right">
         I think it needs to be stated for the record<br>I love playing games.
       </h1>
@@ -169,7 +169,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 2560px) and (min-height: 1440px) {
+@media screen and (min-width: 2560px) and (min-height: 1200px) {
   #hero {
     background-size: 60rem;
     min-height: 75.5vh

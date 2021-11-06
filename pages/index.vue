@@ -12,7 +12,7 @@
           <a href="https://github.com/VoidNulll" class="mb-5 text-url-dark hover:text-accent" aria-label="GitHub Profile">
             <span class="iconify" data-icon="akar-icons:github-fill" data-inline="false" />
           </a>
-          <a href="https://twitter.com/VoidNulll0515" class="ml-2 text-url-dark hover:text-accent" aria-label="Twitter Profile">
+          <a href="https://twitter.com/Aervyon" class="ml-2 text-url-dark hover:text-accent" aria-label="Twitter Profile">
             <span class="iconify" data-icon="akar-icons:twitter-fill" data-inline="false" />
           </a>
         </div>

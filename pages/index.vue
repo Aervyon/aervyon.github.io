@@ -1,7 +1,7 @@
 <template>
   <div id="content" class="mt-10 xl:mt-28">
     <div class="mx-4 md:mx-0 md:ml-14 font-bold text-highlight-dark text-3xl md:text-4xl lg:text-5xl animate-fadeIn">
-      <h1>VoidNull</h1>
+      <h1>Aervyon</h1>
     </div>
     <p class="ml-4 md:ml-14 mb-4 md:mb-16 2xl:mb-32 font-bold text-gray-400 text-lg md:text-xl lg:text-2xl">
       Young programmer, gamer, and maybe more?
@@ -88,7 +88,7 @@
       </h1>
       <p>
         I primarily work with TypeScript and JavaScript (when necessary or TypeScript is unnecessary)<br>
-        <span class="text-accent">I'm venturing into Python, as it's something new, interesting, and its syntax is straight forward enough.</span>
+        <span class="text-accent">I was venturing into Python, as it's something new, interesting, and its syntax is straight forward enough. I have no use for it, so im no longer looking into it.</span>
         <br>I am not a fan of Java. It does not make sense to me, at all.
         <br>In the future I may venture into Rust or Golang or another compiled language.
         <br>Here's a list of the JS/TS frameworks & libraries I have used, along with my experience level.
@@ -115,7 +115,16 @@
         I think it needs to be stated for the record<br>I love playing games.
       </h1>
       <p class="lg:max-w-screen-md xl:max-w-screen-lg">
-        <span class="text-accent">I'm a PC enthusiast, I play a lot of games primarily on PC. <em>That doesn't mean I hate consoles.</em> I actually quite like consoles</span><br>I just find them to be an inconvience at times, however it doesn't help that I have a very last-gen console.<br>I play a wide variety of games, though not as much variety as others.<br><span class="text-accent">Sanboxes?</span> Check. <span class="text-accent">Role playing games?</span> check.<br><span class="text-accent">Survival games?</span> Definitely, those are very fun and sometimes even challenging I dare say.<br><span class="text-accent">Racing games?</span> Check, although they can get boring.<br>I do enjoy <span class="text-accent">cooperative (or co-op competitive)</span> games a lot, however I do not like online-only games.
+        <span class="text-accent">I'm a PC enthusiast, I play a lot of games primarily on PC. <em>That doesn't mean I hate consoles.</em> I actually quite like consoles</span>
+        <br>I just find them to be an inconvience at times, however it doesn't help that I have a very last-gen console.
+        <br>I play a wide variety of games, though not as much variety as others.
+        <br>
+        <span class="text-accent">Sanboxes?</span> Check.
+        <span class="text-accent"> Role playing games?</span> check.
+        <br><span class="text-accent">Survival games?</span> Definitely, those are very fun and sometimes even challenging I dare say.
+        <br><span class="text-accent">Racing games?</span> Check, although they can get boring.
+        <br>I do enjoy <span class="text-accent">cooperative (or co-op competitive)</span> games a lot, however I do not like online-only games.
+        <br><span class="text-accent">Horizon Zero Dawn? </span>Yes.
       </p>
     </section>
   </div>
@@ -144,10 +153,11 @@ export default {
         js: [
           { name: 'TypeScript', link: 'https://www.typescriptlang.org', experience: 'I\'m not sure actually' },
           { name: 'Node.js', link: 'https://nodejs.org', experience: 'I\'m not quite sure, however of my JS projects are in Node.js' },
-          { name: 'Express', link: 'expressjs.com', experience: 'I have decent experience writing routes, managing auth, rendering pages, and configuring express servers' },
+          { name: 'Express', link: 'https://expressjs.com', experience: 'I have decent experience writing routes, managing auth, rendering pages, and configuring express servers' },
           { name: 'Mongoose (MongoDB Driver)', link: 'https://mongoosejs.com', experience: 'I have experience writing and interacting with models in Mongoose.' },
-          { name: 'Vue', link: 'https://vuejs.org/', experience: 'I am very new to Vue.' },
-          { name: 'NuxtJS', link: 'https://nuxtjs.org/', experience: 'I have experience with making statically generated sites. This site is a static site made in NuxtJS.' }
+          { name: 'Vue', link: 'https://v3.vuejs.org/', experience: 'I am very new to Vue.' },
+          { name: 'NuxtJS', link: 'https://nuxtjs.org/', experience: 'I have experience with making statically generated sites. This site is a static site made in NuxtJS.' },
+          { name: 'Fastify', link: 'https://fastify.io', experience: 'Entry-level to medium-level experience with Fastify. I namely have murdered it by replacing a OOP designed webserver built on Express, and slapped Fastify in its place.' }
         ]
       }
     }

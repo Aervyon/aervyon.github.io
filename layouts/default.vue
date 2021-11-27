@@ -3,11 +3,11 @@
     <Nuxt class="flex-grow" />
     <footer class="flex bg-primary-dark p-2 pin-b flex-wrap">
       <h1 class="text-accent text-md lg:text-xl">
-        &copy; {{ new Date().getFullYear() }} VoidNulll
+        &copy; {{ new Date().getFullYear() }} Aervyon
       </h1>
       <div class="float-right max-w-sm md:absolute md:right-8" aria-label="links">
-        <a class="ml-4 text-url-dark" href="https://github.com/VoidNulll/VoidNulll/issues/new?assignees=VoidNulll&template=bug_report.md">Submit Bug Report</a>
-        <a class="ml-4 text-url-dark" href="https://github.com/VoidNulll/VoidNulll/issues/new?labels=enhancement&template=site-suggestion.md">Submit Site Suggestion</a>
+        <a class="ml-4 text-url-dark" href="https://github.com/Aervyon/Aervyon/issues/new?assignees=Aervyon&template=bug_report.md">Submit Bug Report</a>
+        <a class="ml-4 text-url-dark" href="https://github.com/Aervyon/Aervyon/issues/new?labels=enhancement&template=site-suggestion.md">Submit Site Suggestion</a>
       </div>
     </footer>
   </div>

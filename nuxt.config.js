@@ -9,7 +9,7 @@ export default {
         src: 'https://code.iconify.design/1/1.0.7/iconify.min.js'
       }
     ],
-    title: 'VoidNull - $ whoami',
+    title: 'Aervyon - $ whoami',
     htmlAttrs: {
       lang: 'en'
     },

@@ -1,7 +1,7 @@
 <template>
   <div id="content" class="mt-10 xl:mt-28">
     <div class="mx-4 md:mx-0 md:ml-14 font-bold text-highlight-dark text-3xl md:text-4xl lg:text-5xl animate-fadeIn">
-      <h1>VoidNull (or VoidNulll)</h1>
+      <h1>VoidNull</h1>
     </div>
     <p class="ml-4 md:ml-14 mb-4 md:mb-16 2xl:mb-32 font-bold text-gray-400 text-lg md:text-xl lg:text-2xl">
       Young programmer, gamer, and maybe more?
@@ -9,7 +9,7 @@
     <div id="hero" class="ml-24 md:ml-14 md:mx-0">
       <div class="block md:flex">
         <div class="place-self-center flex md:block mx-16 text-3xl lg:text-4xl">
-          <a href="https://github.com/VoidNulll" class="mb-5 text-url-dark hover:text-accent" aria-label="GitHub Profile">
+          <a href="https://github.com/Aervyon" class="mb-5 text-url-dark hover:text-accent" aria-label="GitHub Profile">
             <span class="iconify" data-icon="akar-icons:github-fill" data-inline="false" />
           </a>
           <a href="https://twitter.com/Aervyon" class="ml-2 text-url-dark hover:text-accent" aria-label="Twitter Profile">

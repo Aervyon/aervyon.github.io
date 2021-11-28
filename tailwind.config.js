@@ -16,15 +16,18 @@ module.exports = {
         dark: '#202124',
         'primary-dark': '#292C34',
         'highlight-dark': '#568A97',
-        'url-dark': '#0EB363',
-        accent: '#B9F5D8'
+        'url-dark': '#66C8FF',
+        accent: '#cef3fc'
       },
       fill: {
         dark: '#202124',
         'primary-dark': '#292C34',
         'highlight-dark': '#568A97',
-        'url-dark': '#0EB363',
-        accent: '#B9F5D8'
+        'url-dark': '#66C8FF',
+        accent: '#cef3fc'
+      },
+      width: {
+        112: '28rem'
       }
     }
   },

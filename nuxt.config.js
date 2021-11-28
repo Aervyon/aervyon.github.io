@@ -19,13 +19,13 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'voidnulll\nprogrammer, gamer, ...? Maybe more...' },
-      { name: 'og:image', content: '/VN.png' },
-      { name: 'theme-color', content: '#0EB363' }
+      { hid: 'description', name: 'description', content: '$ aervyon info\nprogrammer, gamer, Maybe more...' },
+      { name: 'og:image', content: '/Aervy_Icon.png' },
+      { name: 'theme-color', content: '#66C8FF' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', href: '/VN.png' }
+      { rel: 'apple-touch-icon', href: '/Aervy_Icon.png' }
     ],
     metaInfo: {
       noscript: {

@@ -15,15 +15,15 @@ module.exports = {
       colors: {
         dark: '#202124',
         'primary-dark': '#292C34',
-        'highlight-dark': '#568A97',
-        'url-dark': '#66C8FF',
-        accent: '#cef3fc'
+        'highlight-dark': '#C9BBFF',
+        'url-dark': '#63A7E5',
+        accent: '#9DC4FF'
       },
       fill: {
         dark: '#202124',
         'primary-dark': '#292C34',
-        'highlight-dark': '#568A97',
-        'url-dark': '#66C8FF',
+        'highlight-dark': '#BBC2FF',
+        'url-dark': '#63A7E5',
         accent: '#cef3fc'
       },
       width: {

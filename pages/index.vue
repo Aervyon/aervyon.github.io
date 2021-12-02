@@ -27,51 +27,52 @@
         </div>
       </div>
     </div>
-    <div data-aos-duration="1000" data-aos="zoom-in-up" class="text-md mb-7 ml-4 lg:max-w-screen-md xl:max-w-screen-lg xl:text-xl text-gray-400 mx-4 md:mx-0 md:ml-14">
-      <h1 id="programmer" class="text-highlight-dark text-2xl xl:text-3xl">
-        Want to learn more about what I program?<br>I'll tell you...
-      </h1>
-      <p>
-        I primarily work with TypeScript and JavaScript (when necessary or TypeScript is unnecessary)<br>
-        <span class="text-accent">I was venturing into Python, as it's something new, interesting, and its syntax is straight forward enough. I have no use for it, so im no longer looking into it.</span>
-        <br>I am not a fan of Java. It does not make sense to me, at all.
-        <br>In the future I may venture into Rust or Golang or another compiled language.
-        <br>Here's a list of the JS/TS frameworks & libraries I have used, along with my experience level.
-      </p>
-      <ul class="mb-4">
-        <li
-          v-for="jstech in technologies.js"
-          :key="jstech.name"
-          class="ml-4"
-        >
-          - <a :href="jstech.link" class="text-url-dark underline">
-            {{ jstech.name }}
-          </a> - {{ jstech.experience }}
-        </li>
-      </ul>
-      <p>
-        I have done some sysadmin things, but they aren't too important or much. <br>Here are some examples: Managing configs for sshd, ufw, certbot, nginx. Installing packages like Node, MongoDB, etc.<br>Basically what everyone does in Linux based operating systems.<br>
-        <span class="text-accent">I do not think Linux operating systems makes a good desktop OS for most people, and can't recommend it as a desktop OS.</span>
-      </p>
+    <div class="xl:grid xl:grid-cols-6 grid-rows-2 grid-flow-col auto-cols-min auto-rows-fr gap-4 mx-4 md:mx-14 xl:mx-28 mt-7">
+      <section data-aos-duration="1000" data-aos="zoom-in-up" class="row-start-1 col-start-2 col-span-3 text-md mb-7 lg:max-w-screen-md xl:max-w-screen-lg xl:text-xl text-gray-400 mx-4">
+        <h1 id="programmer" class="text-highlight-dark text-2xl xl:text-3xl">
+          Want to learn more about what I program?<br>I'll tell you...
+        </h1>
+        <p>
+          I primarily work with TypeScript and JavaScript (when necessary or TypeScript is unnecessary)<br>
+          <span class="text-accent">I was venturing into Python, as it's something new, interesting, and its syntax is straight forward enough. I have no use for it, so im no longer looking into it.</span>
+          <br>I am not a fan of Java. It does not make sense to me, at all.
+          <br>In the future I may venture into Rust or Golang or another compiled language.
+          <br>Here's a list of the JS/TS frameworks & libraries I have used, along with my experience level.
+        </p>
+        <ul class="mb-4">
+          <li
+            v-for="jstech in technologies.js"
+            :key="jstech.name"
+            class="ml-4"
+          >
+            - <a :href="jstech.link" class="text-url-dark underline">
+              {{ jstech.name }}
+            </a> - {{ jstech.experience }}
+          </li>
+        </ul>
+        <p>
+          I have done some sysadmin things, but they aren't too important or much. <br>Here are some examples: Managing configs for sshd, ufw, certbot, nginx. Installing packages like Node, MongoDB, etc.<br>Basically what everyone does in Linux based operating systems.<br>
+          <span class="text-accent">I do not think Linux operating systems makes a good desktop OS for most people, and can't recommend it as a desktop OS.</span>
+        </p>
+      </section>
+      <section data-aos-duration="1000" data-aos="zoom-in-up" class="text-md mb-14 mt-7 row-start-2 col-start-3 col-span-3 md:mx-0 xl:text-xl text-gray-400">
+        <h1 id="gamer" class="text-highlight-dark text-2xl xl:text-3xl mb-6">
+          I think it needs to be stated for the record<br>I love playing games.
+        </h1>
+        <p class="lg:max-w-screen-md xl:max-w-screen-lg">
+          <span class="text-accent">I'm a PC enthusiast, I play a lot of games primarily on PC. <em>That doesn't mean I hate consoles.</em> I actually quite like consoles</span>
+          <br>I just find them to be an inconvience at times, however it doesn't help that I have a very last-gen console.
+          <br>I play a wide variety of games, though not as much variety as others.
+          <br>
+          <span class="text-accent">Sanboxes?</span> Check.
+          <span class="text-accent"> Role playing games?</span> check.
+          <br><span class="text-accent">Survival games?</span> Definitely, those are very fun and sometimes even challenging I dare say.
+          <br><span class="text-accent">Racing games?</span> Check, although they can get boring.
+          <br>I do enjoy <span class="text-accent">cooperative (or co-op competitive)</span> games a lot, however I do not like online-only games.
+          <br><span class="text-accent">Horizon Zero Dawn? </span>Yes.
+        </p>
+      </section>
     </div>
-    <hr class="border-accent">
-    <section data-aos-duration="1000" data-aos="zoom-in-up" class="text-md mb-14 mt-7 ml-4 md:ml-14 md:mx-0 xl:text-xl text-gray-400 2xl:ml-[calc(100vw-68.5rem)]">
-      <h1 id="gamer" class="text-highlight-dark text-2xl xl:text-3xl 2xl:mr-14 mb-6 2xl:text-right">
-        I think it needs to be stated for the record<br>I love playing games.
-      </h1>
-      <p class="lg:max-w-screen-md xl:max-w-screen-lg">
-        <span class="text-accent">I'm a PC enthusiast, I play a lot of games primarily on PC. <em>That doesn't mean I hate consoles.</em> I actually quite like consoles</span>
-        <br>I just find them to be an inconvience at times, however it doesn't help that I have a very last-gen console.
-        <br>I play a wide variety of games, though not as much variety as others.
-        <br>
-        <span class="text-accent">Sanboxes?</span> Check.
-        <span class="text-accent"> Role playing games?</span> check.
-        <br><span class="text-accent">Survival games?</span> Definitely, those are very fun and sometimes even challenging I dare say.
-        <br><span class="text-accent">Racing games?</span> Check, although they can get boring.
-        <br>I do enjoy <span class="text-accent">cooperative (or co-op competitive)</span> games a lot, however I do not like online-only games.
-        <br><span class="text-accent">Horizon Zero Dawn? </span>Yes.
-      </p>
-    </section>
   </div>
 </template>
 

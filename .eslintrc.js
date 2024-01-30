@@ -1,19 +1,11 @@
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    node: true
-  },
-  parserOptions: {
-    parser: 'babel-eslint'
-  },
-  extends: [
-    '@nuxtjs',
-    'plugin:nuxt/recommended'
-  ],
-  plugins: [
-  ],
-  rules: {
-    'vue/multi-word-component-names': 'off'
-  }
+	root: true,
+	extends: [
+		'@nuxt/eslint-config'
+	],
+	rules: {
+		'vue/multi-word-component-names': 'off',
+		'indent': ['warn', 'tab'],
+		'vue/html-indent': ['warn', 'tab']
+	}
 }

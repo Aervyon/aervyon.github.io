@@ -1,6 +1,10 @@
-# voidnulll.github.io
+# My Personal Site
 
-Personal site for VoidNulll
+The website for Aervyon.
+
+This is supposedly Version 4. I lost track of versions a long time ago, it could be V5 for all I know.
+
+Certainly isn't V3 though.
 
 ## Build Setup
 
@@ -16,7 +20,7 @@ $ npm run build
 $ npm run start
 
 # generate static project
-$ npm run generate
+$ npm run build
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

@@ -1,16 +1,14 @@
 module.exports = {
 	mode: 'jit',
-	purge: {
-		content: [
-			'./components/**/*.{vue,js}',
-			'./layouts/**/*.vue',
-			'./pages/**/*.vue',
-			'./pages/*.vue',
-			'./plugins/**/*.{js,ts}',
-			'./nuxt.config.{js,ts}',
-			'./*.{vue,js}'
-		]
-	},
+	content: [
+		'./components/**/*.{vue,js}',
+		'./layouts/**/*.vue',
+		'./pages/**/*.vue',
+		'./pages/*.vue',
+		'./plugins/**/*.{js,ts}',
+		'./nuxt.config.{js,ts}',
+		'./*.{vue,js}'
+	],
 	darkMode: 'media', // or 'media' or 'class'
 	theme: {
 		extend: {

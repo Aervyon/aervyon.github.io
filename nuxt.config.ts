@@ -1,14 +1,21 @@
-import { defineNuxtConfig } from 'nuxt/config'
+import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
 	modules: [
-		'@nuxtjs/eslint-module',
-		'@nuxtjs/tailwindcss',
-		'nuxt-icon-tw'
+		[
+			"@nuxtjs/eslint-module",
+			{
+				include: [
+					"**/*.{js,ts,vue}",
+					"*.{js,ts,vue}",
+					"**/**/*.{js,ts,vue}",
+				],
+				exclude: ["_pages/.*", "_layouts/"],
+			},
+		],
+		"@nuxtjs/tailwindcss",
+		"nuxt-icon-tw",
 	],
-	eslint: {
-
-	},
 	devtools: {
 		enabled: true,
 
@@ -18,21 +25,29 @@ export default defineNuxtConfig({
 	},
 	app: {
 		head: {
-			title: 'Aervyon - # whoami',
+			title: "Aervyon - # whoami",
 			meta: [
-				{ charset: 'utf-8' },
-				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-				{ hid: 'description', name: 'description', content: '$ aervyon info\nprogrammer, gamer, student, more...' },
-				{ name: 'og:image', content: '/Aervy_Icon.png' },
-				{ name: 'theme-color', content: '#66C8FF' }
+				{ charset: "utf-8" },
+				{
+					name: "viewport",
+					content: "width=device-width, initial-scale=1",
+				},
+				{
+					hid: "description",
+					name: "description",
+					content:
+						"$ aervyon info\nprogrammer, gamer, student, more...",
+				},
+				{ name: "og:image", content: "/Aervy_Icon.png" },
+				{ name: "theme-color", content: "#66C8FF" },
 			],
 			link: [
-				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-				{ rel: 'apple-touch-icon', href: '/Aervy_Icon.png' }
-			]
-		}
-	}
-})
+				{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+				{ rel: "apple-touch-icon", href: "/Aervy_Icon.png" },
+			],
+		},
+	},
+});
 
 /* export const secondary = {
 	// Target: https://go.nuxtjs.dev/config-target

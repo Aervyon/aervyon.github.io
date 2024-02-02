@@ -1,11 +1,14 @@
 module.exports = {
 	root: true,
-	extends: [
-		'@nuxt/eslint-config'
-	],
+	env: {
+		browser: true,
+		node: true,
+	},
+	ignorePatterns: ["_layouts/*", "_pages/*"],
+	extends: ["@nuxt/eslint-config", "plugin:prettier/recommended"],
 	rules: {
-		'vue/multi-word-component-names': 'off',
-		'indent': ['warn', 'tab'],
-		'vue/html-indent': ['warn', 'tab']
-	}
-}
+		"vue/multi-word-component-names": "off",
+		indent: ["warn", "tab"],
+		"vue/html-indent": ["off", "tab"],
+	},
+};

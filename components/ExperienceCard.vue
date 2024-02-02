@@ -5,7 +5,6 @@ defineProps<{
 	title: string;
 	start: Date;
 	duration?: string;
-	bg: string;
 	description: string;
 	darkFont?: boolean;
 	logoPadding?: boolean;

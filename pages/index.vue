@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/html-indent -->
 <script setup>
-import { reactive, ref } from "vue";
+import { reactive, ref, computed } from "vue";
 
 const displayLinks = reactive([
 	{
@@ -27,14 +27,25 @@ const tocActive = reactive({
 
 const iconSize = ref("2rem");
 
-const active = ref("intro");
+// const active = ref("intro");
+const route = useRoute();
+
+const active = computed(() => {
+	if (!route.hash) return "intro";
+	if (route.hash === "#tech") return "tech";
+	if (route.hash === "#works" || route.hash === "#projects") return "works";
+	if (route.hash === "#about") return "about";
+	return "intro";
+});
+
+console.log(useRoute().hash);
 </script>
 
 <template>
 	<div class="pb-10">
 		<div class="md:flex mx-auto mt-5 md:mx-32 md:mt-20 lg:mt-60 2xl:mt-72">
 			<!-- Generic Profile Information -->
-			<div class="md:mx-0">
+			<div id="intro" class="md:mx-0">
 				<img src="/Aervy_Icon.png" class="w-40 rounded-full h-auto" />
 				<h1 class="w-fit text-aervyon font-bold text-4xl mt-5">
 					Aervyon
@@ -97,8 +108,8 @@ const active = ref("intro");
 					class="h-fit"
 					:class="{
 						'text-primary-text-dark hover:text-secondary-text-dark':
-							tocActive.intro,
-						'hover:text-primary-text-dark': !tocActive.intro,
+							active == 'intro',
+						'hover:text-primary-text-dark': active != 'intro',
 					}"
 					><Icon
 						name="heroicons:chat-bubble-bottom-center-text-solid"
@@ -111,8 +122,8 @@ const active = ref("intro");
 					class="h-fit"
 					:class="{
 						'text-primary-text-dark hover:text-secondary-text-dark':
-							tocActive.tech,
-						'hover:text-primary-text-dark': !tocActive.tech,
+							active == 'tech',
+						'hover:text-primary-text-dark': active != 'tech',
 					}"
 					><Icon
 						name="heroicons:device-phone-mobile-20-solid"
@@ -125,8 +136,8 @@ const active = ref("intro");
 					class="h-fit"
 					:class="{
 						'text-primary-text-dark hover:text-secondary-text-dark':
-							tocActive.works,
-						'hover:text-primary-text-dark': !tocActive.works,
+							active == 'works',
+						'hover:text-primary-text-dark': active != 'works',
 					}"
 					><Icon
 						name="heroicons:briefcase-solid"
@@ -139,8 +150,8 @@ const active = ref("intro");
 					class="h-fit"
 					:class="{
 						'text-primary-text-dark hover:text-secondary-text-dark':
-							tocActive.about,
-						'hover:text-primary-text-dark': !tocActive.about,
+							active == 'active',
+						'hover:text-primary-text-dark': active != 'about',
 					}"
 					><Icon
 						name="heroicons:user-solid"
@@ -151,7 +162,10 @@ const active = ref("intro");
 			</div>
 		</div>
 		<!-- Tech / Languages area -->
-		<div class="mx-auto mt-10 md:mt-20 lg:mt-40 xl:mt-72 2xl:mt-96 w-fit">
+		<div
+			id="tech"
+			class="mx-auto mt-10 md:mt-20 lg:mt-40 xl:mt-72 2xl:mt-96 w-fit"
+		>
 			<Subtitle class="mx-auto mb-4">Tech > Languages</Subtitle>
 			<!-- I need to make some language cards... -->
 			<div

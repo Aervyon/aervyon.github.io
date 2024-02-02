@@ -54,7 +54,7 @@ console.log(useRoute().hash);
 	<div class="pb-10">
 		<div class="md:flex mx-auto mt-5 md:mx-32 md:mt-20 lg:mt-60 2xl:mt-72">
 			<!-- Generic Profile Information -->
-			<div id="intro" ref="intro" class="mx-auto lg:mx-0 w-fit">
+			<div id="intro" ref="intro" class="mx-auto lg:mx-0">
 				<img src="/Aervy_Icon.png" class="w-40 rounded-full h-auto" />
 				<h1 class="w-fit text-aervyon font-bold text-4xl mt-5">
 					Aervyon
@@ -77,9 +77,14 @@ console.log(useRoute().hash);
 					</a>
 				</div>
 			</div>
-			<div class="mx-5 w-fit mt-5">
+			<div class="mx-5 lg:mx-auto w-fit mt-5">
 				<div class="w-fit">
-					<Subtitle class="w-max">Intro</Subtitle>
+					<div class="flex mb-2">
+						<Subtitle class="w-max">Intro</Subtitle>
+						<a class="ml-2 my-auto text-url-dark" href="/#intro"
+							><Icon name="heroicons:link-solid" size="1.5rem"
+						/></a>
+					</div>
 					<p class="lg:text-2xl w-max">I've been</p>
 					<h1
 						class="text-primary-text-dark text-lg lg:text-4xl w-max"
@@ -179,7 +184,13 @@ console.log(useRoute().hash);
 			<div
 				class="mx-auto mt-10 md:mt-20 lg:mt-40 xl:mt-72 2xl:mt-96 w-fit"
 			>
-				<Subtitle class="mx-auto mb-4">Tech > Languages</Subtitle>
+				<div class="flex mb-4 mx-auto w-fit justify-start">
+					<Subtitle>Tech > Languages</Subtitle>
+					<a class="my-auto ml-2 text-url-dark" href="/#tech"
+						><Icon name="heroicons:link-solid" size="1.5rem"
+					/></a>
+				</div>
+
 				<!-- I need to make some language cards... -->
 				<div
 					class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-fit"

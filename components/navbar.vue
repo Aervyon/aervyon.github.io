@@ -15,7 +15,7 @@ const urls = reactive([
 	},
 	{
 		name: "about",
-		url: "/about",
+		url: "/#about",
 	},
 	{
 		name: "contact",

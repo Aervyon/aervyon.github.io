@@ -54,7 +54,7 @@ console.log(useRoute().hash);
 	<div class="pb-10">
 		<div class="md:flex mx-auto mt-5 md:mx-32 md:mt-20 lg:mt-60 2xl:mt-72">
 			<!-- Generic Profile Information -->
-			<div id="intro" ref="intro" class="md:mx-0">
+			<div id="intro" ref="intro" class="mx-auto lg:mx-0 w-fit">
 				<img src="/Aervy_Icon.png" class="w-40 rounded-full h-auto" />
 				<h1 class="w-fit text-aervyon font-bold text-4xl mt-5">
 					Aervyon
@@ -77,27 +77,31 @@ console.log(useRoute().hash);
 					</a>
 				</div>
 			</div>
-			<div class="mx-auto">
-				<div class="mx-auto">
-					<Subtitle>Intro</Subtitle>
-					<p class="text-2xl w-fit">I've been</p>
-					<h1 class="text-primary-text-dark text-4xl">
+			<div class="mx-5 w-fit mt-5">
+				<div class="w-fit">
+					<Subtitle class="w-max">Intro</Subtitle>
+					<p class="lg:text-2xl w-max">I've been</p>
+					<h1
+						class="text-primary-text-dark text-lg lg:text-4xl w-max"
+					>
 						developing software that is
 					</h1>
-					<h1 class="text-aervyon w-fit text-4xl">
+					<h1 class="text-aervyon w-max text-lg lg:text-4xl">
 						privacy conscious and easy<br />to use
 						<span class="text-secondary-text-dark">since 2018</span>
 					</h1>
 				</div>
-				<div class="max-w-prose">
+				<div class="max-w-prose w-fit">
 					<ul
-						class="text-lg list-disc decoration-aervyon max-w-fit mx-12"
+						class="text-sm lg:text-lg list-disc decoration-aervyon max-w-fit ml-8 lg:mx-12"
 					>
-						<li class="text-aervyon">
-							<p>cs student</p>
+						<li class="text-aervyon w-fit">
+							<p class="w-fit">cs student</p>
 						</li>
-						<li class="text-aervyon max-w-prose">
-							<p class="text-secondary-text-dark max-w-prose">
+						<li class="text-aervyon w-fit lg:max-w-prose">
+							<p
+								class="text-secondary-text-dark lg:max-w-prose max-w-xs break-words"
+							>
 								perpetually
 								<span class="text-aervyon">learning</span> new
 								things by

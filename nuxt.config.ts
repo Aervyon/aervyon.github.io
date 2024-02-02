@@ -13,6 +13,7 @@ export default defineNuxtConfig({
 				exclude: ["_pages/.*", "_layouts/"],
 			},
 		],
+		"@vueuse/nuxt",
 		"@nuxtjs/tailwindcss",
 		"nuxt-icon-tw",
 	],

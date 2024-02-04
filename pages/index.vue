@@ -69,7 +69,7 @@ const active = computed(() => {
 				</div>
 				<!-- Contact Information -->
 				<div
-					class="mx-auto md:mx-0 w-fit mt-5 justify-evenly flex rounded-xl px-2.5 py-2.5 border-2 hover:border-link-dark bg-accent-secondary-dark bg-opacity-10 border-accent-secondary-dark text-accent-secondary-dark"
+					class="mx-auto md:mx-0 w-fit mt-5 justify-evenly flex rounded-xl px-2.5 py-2.5 border-2 hover:border-link-dark bg-accent-secondary-dark bg-opacity-10 border-accent-secondary-dark text-accent-secondary-dark shadow-md shadow-black"
 				>
 					<a
 						v-for="link in displayLinks"
@@ -126,7 +126,7 @@ const active = computed(() => {
 			<!-- Basically a table of contents. For now we hide it on mobile -->
 			<!-- Will be sticky eventually -->
 			<div
-				class="hidden w-fit xl:flex flex-col h-fit p-4 border-4 border-aervyon rounded-lg bg-[#162C33] text-lg font-mono"
+				class="hidden w-fit xl:flex flex-col h-fit p-4 border-4 border-aervyon rounded-lg bg-[#162C33] text-lg font-mono shadow-lg shadow-black"
 				:class="{
 					'fixed right-52 top-96': !introVisible,
 					'sticky mx-auto my-auto': introVisible,

@@ -12,7 +12,9 @@ defineProps<{
 			'border-accent-secondary-dark bg-accent-secondary-dark': altColors,
 		}"
 	>
-		<p class="text-sm md:text-md text-primary-text-dark font-bold">
+		<p
+			class="text-sm md:text-md lg:text-lg text-primary-text-dark font-bold font-mono"
+		>
 			<slot />
 		</p>
 	</div>

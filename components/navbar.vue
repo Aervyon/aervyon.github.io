@@ -61,7 +61,9 @@ const urls = reactive([
 			class="w-full md:block md:w-auto text-link-dark text-xl mr-40"
 			:class="{ hidden: !isOpen }"
 		>
-			<ul class="md:space-x-10 p-4 md:p-0 md:flex flex-col md:flex-row">
+			<ul
+				class="md:space-x-10 p-4 md:p-0 md:flex flex-col md:flex-row font-mono"
+			>
 				<li v-for="url in urls" :key="url.name">
 					<NuxtLink :to="url.url" class="hover:text-url-dark">
 						<span class="block py-1 px-3">

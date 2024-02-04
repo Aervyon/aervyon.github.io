@@ -56,12 +56,12 @@ const active = computed(() => {
 					/>
 					<div>
 						<h1
-							class="w-fit text-aervyon font-bold text-3xl md:text-4xl md:mt-2"
+							class="w-fit text-aervyon font-bold text-3xl md:text-4xl xl:text-5xl md:mt-2 text-shadow shadow-black"
 						>
 							Aervyon
 						</h1>
 						<h2
-							class="mt-1 md:mt-2 text-xl md:text-2xl text-primary-text-dark w-max"
+							class="mt-1 md:mt-2 text-xl md:text-2xl xl:text-3xl text-primary-text-dark w-max text-shadow shadow-aervyon font-bold"
 						>
 							Software Developer
 						</h2>
@@ -83,7 +83,7 @@ const active = computed(() => {
 				</div>
 			</div>
 			<div class="mx-auto w-fit mt-10 md:my-auto">
-				<div class="w-fit">
+				<div class="w-fit font-mono">
 					<div class="flex mb-2">
 						<Subtitle class="w-max">Intro</Subtitle>
 						<a class="ml-2 my-auto text-url-dark" href="/#intro"
@@ -126,7 +126,7 @@ const active = computed(() => {
 			<!-- Basically a table of contents. For now we hide it on mobile -->
 			<!-- Will be sticky eventually -->
 			<div
-				class="hidden w-fit xl:flex flex-col h-fit p-4 border-4 border-aervyon rounded-lg bg-[#162C33] text-lg"
+				class="hidden w-fit xl:flex flex-col h-fit p-4 border-4 border-aervyon rounded-lg bg-[#162C33] text-lg font-mono"
 				:class="{
 					'fixed right-52 top-96': !introVisible,
 					'sticky mx-auto my-auto': introVisible,

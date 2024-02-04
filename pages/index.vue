@@ -22,17 +22,11 @@ const displayLinks = reactive([
 
 const tech = ref(null);
 const intro = ref(null);
+const projects = ref(null);
 
 const introVisible = useElementVisibility(intro);
 const techVisibile = useElementVisibility(tech);
-
-const tocActive = reactive({
-	intro: true,
-	tech: false,
-	experience: false,
-	works: false,
-	about: false,
-});
+const projectsVisible = useElementVisibility(projects);
 
 const iconSize = ref("2rem");
 
@@ -150,12 +144,12 @@ console.log(useRoute().hash);
 					/>Tech
 				</NuxtLink>
 				<NuxtLink
-					to="/#works"
+					to="/#projects"
 					class="h-fit"
 					:class="{
 						'text-primary-text-dark hover:text-secondary-text-dark':
-							active == 'works',
-						'hover:text-primary-text-dark': active != 'works',
+							projectsVisible,
+						'hover:text-primary-text-dark': !projectsVisible,
 					}"
 					><Icon
 						name="heroicons:briefcase-solid"
@@ -339,6 +333,86 @@ console.log(useRoute().hash);
 							:start="new Date('2020-01-07')"
 							description="The other server OS I use, if Debian/RHEL based is not available"
 							:logo-padding="true"
+						/>
+					</div>
+				</div>
+				<div id="projects" ref="projects" class="mx-auto mt-16 w-fit">
+					<div class="flex mb-4 mx-auto w-fit justify-start">
+						<Subtitle>Projects</Subtitle>
+						<a class="my-auto ml-2 text-url-dark" href="/#projects"
+							><Icon name="heroicons:link-solid" size="1.5rem"
+						/></a>
+					</div>
+					<!-- I need to make some language cards... -->
+					<div
+						class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-fit"
+					>
+						<ProjectCard
+							:roles="['Lead', 'designer']"
+							icon-url="/folderr-icon.svg"
+							icon-alt="A simple vibrant green folder outline in a black box, the folder has a semi-transparent green fill"
+							name="Folderr/Folderr"
+							:dark-font="false"
+							class="bg-[#0D130C]"
+							description="A file host with custom user URL support"
+							:languages="[
+								{
+									name: 'TypeScript',
+									icon: 'devicon:typescript',
+									iconSize: '1.5rem',
+								},
+								{
+									name: 'Vue',
+									icon: 'devicon:vuejs',
+									iconSize: '1.5rem',
+								},
+							]"
+						/>
+						<ProjectCard
+							:roles="['Lead developer']"
+							icon-url="/folderr-icon.svg"
+							repository="https://github.com/Folderr/foldcli"
+							icon-alt="A simple vibrant green folder outline in a black box, the folder has a semi-transparent green fill"
+							name="Folderr/foldcli"
+							class="bg-[#0D130C]"
+							:dark-font="false"
+							:start="new Date('2024-01-18')"
+							description="A command-line interface for Folderr"
+							:languages="[
+								{
+									name: 'Go',
+									icon: 'skill-icons:golang',
+									iconSize: '1.5rem',
+								},
+							]"
+						/>
+						<ProjectCard
+							:roles="['Lead']"
+							website="https://folderr.net"
+							website-name="Website"
+							repository="https://github.com/Folderr/Docs"
+							icon-url="/folderr-icon.svg"
+							icon-alt="A simple vibrant green folder outline in a black box, the folder has a semi-transparent green fill"
+							name="Folderr/docs"
+							class="bg-[#0D130C]"
+							:dark-font="false"
+							description="Documentation for Folderr"
+						/>
+						<ProjectCard
+							:roles="['Developer', 'designer']"
+							repository="https://github.com/Aervyon/aervyon.github.io"
+							icon-url="/logo-cut.svg"
+							name="This website"
+							class="bg-[#343434]"
+							:dark-font="false"
+							description="My portfolio, from scratch with Nuxt 3"
+							:languages="[
+								{
+									name: 'Vue',
+									icon: 'devicon:vuejs',
+									iconSize: '1.5rem',
+								},
+							]"
 						/>
 					</div>
 				</div>

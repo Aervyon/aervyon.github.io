@@ -30,7 +30,7 @@ const formatDate = (duration: number): string => {
 </script>
 
 <template>
-	<div class="flex pr-4 pl-0">
+	<div class="flex pr-4 pl-0 py-2">
 		<!-- Icon -->
 		<Icon
 			:name="iconName"

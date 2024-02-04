@@ -45,7 +45,7 @@ const active = computed(() => {
 <template>
 	<div class="pb-10">
 		<div
-			class="mx-auto mt-5 md:mt-20 lg:mt-60 2xl:mt-72 md:grid md:grid-cols-2 xl:grid-cols-3"
+			class="mx-auto mt-10 md:mt-20 lg:mt-60 2xl:mt-72 md:grid md:grid-cols-2 xl:grid-cols-3"
 		>
 			<!-- Generic Profile Information -->
 			<div id="intro" ref="intro" class="mx-auto w-fit">
@@ -55,11 +55,13 @@ const active = computed(() => {
 						class="w-20 h-20 md:w-32 md:h-32 lg:w-32 lg:h-32 xl:w-40 xl:h-40 mt-auto rounded-full lg:my-0 mr-4 lg:mr-0"
 					/>
 					<div>
-						<h1 class="w-fit text-aervyon font-bold text-4xl mt-5">
+						<h1
+							class="w-fit text-aervyon font-bold text-3xl md:text-4xl md:mt-2"
+						>
 							Aervyon
 						</h1>
 						<h2
-							class="mt-2.5 text-2xl text-primary-text-dark w-max"
+							class="mt-1 md:mt-2 text-xl md:text-2xl text-primary-text-dark w-max"
 						>
 							Software Developer
 						</h2>
@@ -80,7 +82,7 @@ const active = computed(() => {
 					</a>
 				</div>
 			</div>
-			<div class="mx-auto w-fit mt-5 md:my-auto">
+			<div class="mx-auto w-fit mt-10 md:my-auto">
 				<div class="w-fit">
 					<div class="flex mb-2">
 						<Subtitle class="w-max">Intro</Subtitle>
@@ -88,34 +90,34 @@ const active = computed(() => {
 							><Icon name="heroicons:link-solid" size="1.5rem"
 						/></a>
 					</div>
-					<p class="md:text-xl lg:text-2xl w-max">I've been</p>
+					<p class="text-xl lg:text-2xl w-max">I've been</p>
 					<h1
-						class="text-primary-text-dark text-lg md:text-2xl lg:text-4xl w-max"
+						class="text-primary-text-dark text-2xl lg:text-4xl w-max"
 					>
 						developing software that is
 					</h1>
-					<h1
-						class="text-aervyon w-max text-lg md:text-2xl lg:text-4xl"
-					>
+					<h1 class="text-aervyon w-max text-2xl lg:text-4xl">
 						privacy conscious and easy<br />to use
 						<span class="text-secondary-text-dark">since 2018</span>
 					</h1>
 				</div>
 				<div class="max-w-prose w-fit">
 					<ul
-						class="text-sm md:text-base lg:text-lg list-disc decoration-aervyon max-w-fit ml-8 lg:mx-12"
+						class="text-base lg:text-lg list-disc decoration-aervyon max-w-fit ml-8 lg:mx-12"
 					>
 						<li class="text-aervyon w-fit">
 							<p class="w-fit">cs student</p>
 						</li>
 						<li class="text-aervyon w-fit lg:max-w-prose">
 							<p
-								class="text-secondary-text-dark lg:max-w-prose max-w-xs break-words"
+								class="text-secondary-text-dark lg:max-w-prose max-w-xs break-words w-fit"
 							>
 								perpetually
 								<span class="text-aervyon">learning</span> new
 								things by
-								<span class="text-aervyon">experimenting</span>
+								<span class="text-aervyon"
+									><br />experimenting</span
+								>
 							</p>
 						</li>
 					</ul>
@@ -191,10 +193,13 @@ const active = computed(() => {
 		<!-- Tech / Languages area -->
 		<div id="tech" ref="tech">
 			<div
-				class="mx-auto mt-10 md:mt-36 lg:mt-40 xl:mt-72 2xl:mt-96 w-fit"
+				class="mx-auto mt-24 md:mt-36 lg:mt-40 xl:mt-72 2xl:mt-96 w-fit"
 			>
 				<div class="flex mb-4 mx-auto w-fit justify-start">
-					<Subtitle>Tech > Languages</Subtitle>
+					<div class="flex space-x-2">
+						<Subtitle>Tech</Subtitle>
+						<Subtitle :alt-colors="true">Languages</Subtitle>
+					</div>
 					<a class="my-auto ml-2 text-url-dark" href="/#tech"
 						><Icon name="heroicons:link-solid" size="1.5rem"
 					/></a>
@@ -238,9 +243,13 @@ const active = computed(() => {
 				</div>
 			</div>
 			<div class="mx-auto mt-16 w-fit">
-				<Subtitle class="mx-auto mb-4"
-					>Tech > Libraries & Frameworks</Subtitle
-				>
+				<div class="flex space-x-2 mx-auto mb-4 w-fit">
+					<Subtitle>Tech</Subtitle>
+					<Subtitle :alt-colors="true"
+						>Libraries & Frameworks</Subtitle
+					>
+				</div>
+
 				<!-- I need to make some language cards... -->
 				<div
 					class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-fit"
@@ -288,9 +297,12 @@ const active = computed(() => {
 					/>
 				</div>
 				<div class="mx-auto mt-16 w-fit">
-					<Subtitle class="mx-auto mb-4"
-						>Tech > Database Management</Subtitle
-					>
+					<div class="mx-auto mb-4 w-fit flex space-x-2">
+						<Subtitle>Tech</Subtitle>
+						<Subtitle :alt-colors="true"
+							>Database Management</Subtitle
+						>
+					</div>
 					<!-- I need to make some language cards... -->
 					<div class="grid sm:grid-cols-1 md:grid-cols-2 w-fit">
 						<ExperienceCard
@@ -310,9 +322,12 @@ const active = computed(() => {
 					</div>
 				</div>
 				<div class="mx-auto mt-16 w-fit">
-					<Subtitle class="mx-auto mb-4"
-						>Tech > Linux OS Management</Subtitle
-					>
+					<div class="flex mx-auto mb-4 w-fit space-x-2">
+						<Subtitle>Tech</Subtitle>
+						<Subtitle :alt-colors="true"
+							>Linux OS Management</Subtitle
+						>
+					</div>
 					<!-- I need to make some language cards... -->
 					<div
 						class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-fit"
@@ -351,11 +366,11 @@ const active = computed(() => {
 						/>
 					</div>
 				</div>
-				<div
-					id="projects"
-					ref="projects"
-					class="mx-auto mt-16 lg:w-fit"
-				>
+			</div>
+		</div>
+		<div id="projects" ref="projects">
+			<div class="mx-auto mt-24 md:mt-36 lg:mt-40 w-fit">
+				<div class="mx-auto mt-16 lg:w-fit">
 					<div class="flex mb-4 mx-auto w-fit justify-start">
 						<Subtitle>Projects</Subtitle>
 						<a class="my-auto ml-2 text-url-dark" href="/#projects"

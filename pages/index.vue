@@ -40,25 +40,34 @@ const active = computed(() => {
 	if (route.hash === "#about") return "about";
 	return "intro";
 });
-
-console.log(useRoute().hash);
 </script>
 
 <template>
 	<div class="pb-10">
-		<div class="md:flex mx-auto mt-5 md:mx-32 md:mt-20 lg:mt-60 2xl:mt-72">
+		<div
+			class="md:flex mx-auto mt-5 md:mx-32 md:mt-20 lg:mt-60 2xl:mt-72 lg:grid lg:grid-cols-3"
+		>
 			<!-- Generic Profile Information -->
-			<div id="intro" ref="intro" class="mx-auto lg:mx-0">
-				<img src="/Aervy_Icon.png" class="w-40 rounded-full h-auto" />
-				<h1 class="w-fit text-aervyon font-bold text-4xl mt-5">
-					Aervyon
-				</h1>
-				<h2 class="mt-2.5 text-2xl text-primary-text-dark w-max">
-					Software Developer
-				</h2>
+			<div id="intro" ref="intro" class="mx-auto w-fit">
+				<div class="flex md:block">
+					<img
+						src="/Aervy_Icon.png"
+						class="w-20 h-20 md:w-20 md:h-20 lg:w-30 lg:w-30 xl:w-40 xl:h-40 mt-auto rounded-full lg:my-0 mr-4 lg:mr-0"
+					/>
+					<div>
+						<h1 class="w-fit text-aervyon font-bold text-4xl mt-5">
+							Aervyon
+						</h1>
+						<h2
+							class="mt-2.5 text-2xl text-primary-text-dark w-max"
+						>
+							Software Developer
+						</h2>
+					</div>
+				</div>
 				<!-- Contact Information -->
 				<div
-					class="w-fit mt-5 justify-evenly flex rounded-xl px-2.5 py-2.5 border-2 hover:border-link-dark bg-accent-secondary-dark bg-opacity-10 border-accent-secondary-dark text-accent-secondary-dark"
+					class="mx-auto md:mx-0 w-fit mt-5 justify-evenly flex rounded-xl px-2.5 py-2.5 border-2 hover:border-link-dark bg-accent-secondary-dark bg-opacity-10 border-accent-secondary-dark text-accent-secondary-dark"
 				>
 					<a
 						v-for="link in displayLinks"
@@ -71,7 +80,7 @@ console.log(useRoute().hash);
 					</a>
 				</div>
 			</div>
-			<div class="mx-5 lg:mx-auto w-fit mt-5">
+			<div class="mx-auto w-fit mt-5">
 				<div class="w-fit">
 					<div class="flex mb-2">
 						<Subtitle class="w-max">Intro</Subtitle>
@@ -113,7 +122,11 @@ console.log(useRoute().hash);
 			<!-- Basically a table of contents. For now we hide it on mobile -->
 			<!-- Will be sticky eventually -->
 			<div
-				class="hidden w-fit xl:flex flex-col fixed right-52 top-96 h-fit p-4 border-4 border-aervyon rounded-lg bg-[#162C33] text-lg"
+				class="hidden w-fit xl:flex flex-col h-fit p-4 border-4 border-aervyon rounded-lg bg-[#162C33] text-lg"
+				:class="{
+					'fixed right-52 top-96': !introVisible,
+					'sticky mx-auto my-auto': introVisible,
+				}"
 			>
 				<NuxtLink
 					to="/#intro"
@@ -155,7 +168,7 @@ console.log(useRoute().hash);
 						name="heroicons:briefcase-solid"
 						size="1.5rem"
 						class="mr-2"
-					/>Works
+					/>Projects
 				</NuxtLink>
 				<NuxtLink
 					to="/#about"
@@ -336,7 +349,11 @@ console.log(useRoute().hash);
 						/>
 					</div>
 				</div>
-				<div id="projects" ref="projects" class="mx-auto mt-16 w-fit">
+				<div
+					id="projects"
+					ref="projects"
+					class="mx-auto mt-16 lg:w-fit"
+				>
 					<div class="flex mb-4 mx-auto w-fit justify-start">
 						<Subtitle>Projects</Subtitle>
 						<a class="my-auto ml-2 text-url-dark" href="/#projects"
@@ -345,7 +362,7 @@ console.log(useRoute().hash);
 					</div>
 					<!-- I need to make some language cards... -->
 					<div
-						class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-fit"
+						class="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full"
 					>
 						<ProjectCard
 							:roles="['Lead', 'designer']"

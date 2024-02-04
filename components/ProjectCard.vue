@@ -19,7 +19,7 @@ const size = ref("10rem");
 </script>
 
 <template>
-	<div class="flex pr-4 pl-0 h-full my-4">
+	<div class="flex pr-4 pl-0 h-full w-full xl:w-auto py-4">
 		<!-- Icon -->
 		<Icon
 			v-if="iconName"
@@ -34,16 +34,16 @@ const size = ref("10rem");
 			:alt="iconAlt"
 			:class="logoPadding ? 'p-4' : ''"
 			:src="iconUrl"
-			class="w-40"
+			class="w-20 lg:w-40"
 		/>
 		<div
-			class="ml-10 text-2xl my-auto font-bold"
+			class="ml-10 my-auto font-bold"
 			:class="{
 				'text-primary-text-dark': !darkFont,
 				'text-primary-dark': darkFont,
 			}"
 		>
-			<div class="flex">
+			<div class="flex text-xl lg:text-2xl">
 				<h1>
 					{{ name }}
 				</h1>
@@ -61,7 +61,7 @@ const size = ref("10rem");
 			<div class="text-base font-normal">
 				<div
 					v-if="(website && websiteName) || repository"
-					class="flex space-x-8 w-full justify-between text-url-dark"
+					class="text-sm lg:text-base flex w-full justify-between text-url-dark"
 				>
 					<a
 						v-if="website && websiteName"

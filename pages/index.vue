@@ -45,14 +45,14 @@ const active = computed(() => {
 <template>
 	<div class="pb-10">
 		<div
-			class="md:flex mx-auto mt-5 md:mx-32 md:mt-20 lg:mt-60 2xl:mt-72 lg:grid lg:grid-cols-3"
+			class="mx-auto mt-5 md:mt-20 lg:mt-60 2xl:mt-72 md:grid md:grid-cols-2 xl:grid-cols-3"
 		>
 			<!-- Generic Profile Information -->
 			<div id="intro" ref="intro" class="mx-auto w-fit">
 				<div class="flex md:block">
 					<img
 						src="/Aervy_Icon.png"
-						class="w-20 h-20 md:w-20 md:h-20 lg:w-30 lg:w-30 xl:w-40 xl:h-40 mt-auto rounded-full lg:my-0 mr-4 lg:mr-0"
+						class="w-20 h-20 md:w-32 md:h-32 lg:w-32 lg:h-32 xl:w-40 xl:h-40 mt-auto rounded-full lg:my-0 mr-4 lg:mr-0"
 					/>
 					<div>
 						<h1 class="w-fit text-aervyon font-bold text-4xl mt-5">
@@ -80,7 +80,7 @@ const active = computed(() => {
 					</a>
 				</div>
 			</div>
-			<div class="mx-auto w-fit mt-5">
+			<div class="mx-auto w-fit mt-5 md:my-auto">
 				<div class="w-fit">
 					<div class="flex mb-2">
 						<Subtitle class="w-max">Intro</Subtitle>
@@ -88,20 +88,22 @@ const active = computed(() => {
 							><Icon name="heroicons:link-solid" size="1.5rem"
 						/></a>
 					</div>
-					<p class="lg:text-2xl w-max">I've been</p>
+					<p class="md:text-xl lg:text-2xl w-max">I've been</p>
 					<h1
-						class="text-primary-text-dark text-lg lg:text-4xl w-max"
+						class="text-primary-text-dark text-lg md:text-2xl lg:text-4xl w-max"
 					>
 						developing software that is
 					</h1>
-					<h1 class="text-aervyon w-max text-lg lg:text-4xl">
+					<h1
+						class="text-aervyon w-max text-lg md:text-2xl lg:text-4xl"
+					>
 						privacy conscious and easy<br />to use
 						<span class="text-secondary-text-dark">since 2018</span>
 					</h1>
 				</div>
 				<div class="max-w-prose w-fit">
 					<ul
-						class="text-sm lg:text-lg list-disc decoration-aervyon max-w-fit ml-8 lg:mx-12"
+						class="text-sm md:text-base lg:text-lg list-disc decoration-aervyon max-w-fit ml-8 lg:mx-12"
 					>
 						<li class="text-aervyon w-fit">
 							<p class="w-fit">cs student</p>
@@ -189,7 +191,7 @@ const active = computed(() => {
 		<!-- Tech / Languages area -->
 		<div id="tech" ref="tech">
 			<div
-				class="mx-auto mt-10 md:mt-20 lg:mt-40 xl:mt-72 2xl:mt-96 w-fit"
+				class="mx-auto mt-10 md:mt-36 lg:mt-40 xl:mt-72 2xl:mt-96 w-fit"
 			>
 				<div class="flex mb-4 mx-auto w-fit justify-start">
 					<Subtitle>Tech > Languages</Subtitle>

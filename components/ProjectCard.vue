@@ -34,7 +34,7 @@ const size = ref("10rem");
 			:alt="iconAlt"
 			:class="logoPadding ? 'p-4' : ''"
 			:src="iconUrl"
-			class="w-20 lg:w-40"
+			class="w-20 md:w-30 lg:w-40"
 		/>
 		<div
 			class="ml-10 my-auto font-bold"
@@ -43,7 +43,7 @@ const size = ref("10rem");
 				'text-primary-dark': darkFont,
 			}"
 		>
-			<div class="flex text-xl lg:text-2xl">
+			<div class="flex text-xl md:text-2xl">
 				<h1>
 					{{ name }}
 				</h1>
@@ -61,7 +61,7 @@ const size = ref("10rem");
 			<div class="text-base font-normal">
 				<div
 					v-if="(website && websiteName) || repository"
-					class="text-sm lg:text-base flex w-full justify-between text-url-dark"
+					class="text-sm md:text-base flex w-full justify-between text-url-dark"
 				>
 					<a
 						v-if="website && websiteName"

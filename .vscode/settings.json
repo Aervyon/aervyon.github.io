@@ -1,0 +1,13 @@
+{
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.defaultFormatter": "dbaeumer.vscode-eslint",
+	"css.format.enable": false,
+	"less.format.enable": false,
+	"scss.format.enable": false,
+	"eslint.format.enable": true,
+	"prettier.enable": false,
+	"[vue]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	}
+}

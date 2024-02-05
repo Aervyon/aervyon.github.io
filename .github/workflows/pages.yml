@@ -3,31 +3,46 @@ name: github-pages
 on: [push]
 
 jobs:
-  cd:
+  build:
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [12]
+        node: [20]
 
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
 
       - name: Setup node env
-        uses: actions/setup-node@v2.5.0
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
 
       - name: Install dependencies
         run: npm i
 
-      - name: Generate
-        run: npm run generate
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3.8.0
+      - name: Build
+        run: npm run build
+        env:
+          NITRO_PRESET: github_pages
+      - name: Upload Output
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          # change to ./.output/public when really ready to deploy
+          path: ./.output/public
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github_pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

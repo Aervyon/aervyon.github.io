@@ -1,6 +1,13 @@
 <!-- eslint-disable vue/html-indent -->
 <script setup>
-import { reactive, ref, computed } from "vue";
+import {
+	reactive,
+	ref,
+	computed,
+	onMounted,
+	onBeforeUnmount,
+	watch,
+} from "vue";
 import { useElementVisibility } from "@vueuse/core";
 
 const displayLinks = reactive([
@@ -23,6 +30,82 @@ const displayLinks = reactive([
 const tech = ref(null);
 const intro = ref(null);
 const projects = ref(null);
+
+const name = "Aervyon";
+const title = "Software Developer";
+const titleRef = ref("");
+const nameRef = ref("A|");
+
+const loadLinks = ref(false);
+
+let cursorInterval;
+
+const setCursor = () => {
+	cursorInterval = setInterval(() => {
+		if (titleRef.value.endsWith("|")) {
+			titleRef.value = titleRef.value.replace("|", "");
+		} else {
+			titleRef.value = titleRef.value + "|";
+		}
+	}, 1000);
+};
+
+const loadTitleSlowly = () => {
+	const interval = setInterval(() => {
+		// if len <= name length - 1
+		// assume cursor
+		// replace cursor
+		let len = titleRef.value.length - 1;
+		if (len === 0) {
+			len = 1;
+		}
+		if (!titleRef.value) {
+			titleRef.value = "S";
+		} else if (
+			len <= title.length - 1 &&
+			titleRef.value[len] !== title[len]
+		) {
+			titleRef.value = titleRef.value.replace("|", title[len]);
+			titleRef.value = titleRef.value + "|";
+		}
+	}, 50);
+	let cleared = false;
+	watch(titleRef, () => {
+		if (titleRef.value?.length > title.length && !cleared) {
+			clearInterval(interval);
+			setCursor();
+			cleared = true;
+			loadLinks.value = true;
+		}
+	});
+};
+
+const loadNameSlowly = () => {
+	const interval = setInterval(() => {
+		// if len <= name length - 1
+		// assume cursor
+		// replace cursor
+		console.log("Loading name slowly");
+		const len = nameRef.value.length - 1;
+		if (len <= name.length - 1 && nameRef.value[len] !== name[len]) {
+			nameRef.value = nameRef.value.replace("|", name[len]);
+			nameRef.value = nameRef.value + "|";
+		}
+	}, 50);
+	let cleared = false;
+	watch(nameRef, () => {
+		if (nameRef.value?.length > name.length && !cleared) {
+			nameRef.value = nameRef.value.replace("|", "");
+			clearInterval(interval);
+			loadTitleSlowly();
+			cleared = true;
+		}
+	});
+};
+
+onMounted(() => loadNameSlowly());
+
+onBeforeUnmount(() => clearInterval(cursorInterval));
 
 const introVisible = useElementVisibility(intro);
 const techVisibile = useElementVisibility(tech);
@@ -58,29 +141,35 @@ const active = computed(() => {
 						<h1
 							class="w-fit text-aervyon font-bold text-3xl md:text-4xl xl:text-5xl md:mt-2 text-shadow shadow-black"
 						>
-							Aervyon
+							{{ nameRef }}
 						</h1>
 						<h2
 							class="mt-1 md:mt-2 text-xl md:text-2xl xl:text-3xl text-primary-text-dark w-max text-shadow shadow-aervyon font-bold"
 						>
-							Software Developer
+							{{ titleRef }}
 						</h2>
 					</div>
 				</div>
 				<!-- Contact Information -->
-				<div
-					class="mx-auto md:mx-0 w-fit mt-5 justify-evenly flex rounded-xl px-2.5 py-2.5 border-2 hover:border-link-dark bg-accent-secondary-dark bg-opacity-10 border-accent-secondary-dark text-accent-secondary-dark shadow-md shadow-black"
+				<Transition
+					enter-from-class="opacity-0"
+					enter-active-class="transition duration-300"
 				>
-					<a
-						v-for="link in displayLinks"
-						:key="link.icon"
-						:href="link.url"
-						class="hover:text-link-dark px-2.5"
+					<div
+						v-if="loadLinks"
+						class="mx-auto md:mx-0 w-fit mt-5 justify-evenly flex rounded-xl px-2.5 py-2.5 border-2 hover:border-link-dark bg-accent-secondary-dark bg-opacity-10 border-accent-secondary-dark text-accent-secondary-dark shadow-md shadow-black"
 					>
-						<!-- Icon Size feels like a patch for now -->
-						<Icon :name="link.icon" :size="iconSize" />
-					</a>
-				</div>
+						<a
+							v-for="link in displayLinks"
+							:key="link.icon"
+							:href="link.url"
+							class="hover:text-link-dark px-2.5"
+						>
+							<!-- Icon Size feels like a patch for now -->
+							<Icon :name="link.icon" :size="iconSize" />
+						</a>
+					</div>
+				</Transition>
 			</div>
 			<div class="mx-auto w-fit mt-10 md:my-auto">
 				<div class="w-fit font-mono">

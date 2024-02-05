@@ -58,7 +58,7 @@ const urls = reactive([
 			</svg>
 		</button>
 		<div
-			class="w-full md:block md:w-auto text-link-dark text-xl mr-40"
+			class="w-full md:block md:w-auto text-link-dark text-xl lg:mr-40"
 			:class="{ hidden: !isOpen }"
 		>
 			<ul

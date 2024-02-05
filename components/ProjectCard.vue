@@ -67,6 +67,7 @@ const size = ref("10rem");
 						v-if="website && websiteName"
 						:href="website"
 						class="hover:text-highlight-dark"
+						target="_blank"
 						><Icon
 							name="heroicons:link-solid"
 							size="1rem"
@@ -77,6 +78,7 @@ const size = ref("10rem");
 						v-if="repository"
 						:href="repository"
 						class="hover:text-highlight-dark"
+						target="_blank"
 						><Icon
 							name="devicon:git"
 							size="1rem"

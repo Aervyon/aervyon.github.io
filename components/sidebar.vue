@@ -2,7 +2,7 @@
 defineProps<{
 	introActive: boolean;
 	techActive: boolean;
-	worksActive: boolean;
+	projectsActive: boolean;
 	aboutActive: boolean;
 	active: string;
 }>();
@@ -10,15 +10,19 @@ defineProps<{
 
 <template>
 	<div
-		class="hidden xl:flex flex-col sticky top-96 h-fit p-4 border-4 border-aervyon rounded-lg bg-opacity-10 bg-aervyon text-lg"
+		class="hidden w-fit xl:flex flex-col h-fit p-4 border-4 border-aervyon rounded-lg bg-[#162C33] text-lg font-mono shadow-lg shadow-black"
+		:class="{
+			'fixed right-52 top-96': !introActive,
+			'sticky mx-auto my-auto': introActive,
+		}"
 	>
 		<NuxtLink
 			to="/#intro"
 			class="h-fit"
 			:class="{
 				'text-primary-text-dark hover:text-secondary-text-dark':
-					active == 'intro',
-				'hover:text-primary-text-dark': active != 'intro',
+					introActive,
+				'hover:text-primary-text-dark': !introActive,
 			}"
 			><Icon
 				name="heroicons:chat-bubble-bottom-center-text-solid"
@@ -31,8 +35,8 @@ defineProps<{
 			class="h-fit"
 			:class="{
 				'text-primary-text-dark hover:text-secondary-text-dark':
-					active == 'tech',
-				'hover:text-primary-text-dark': active != 'tech',
+					techActive,
+				'hover:text-primary-text-dark': !techActive,
 			}"
 			><Icon
 				name="heroicons:device-phone-mobile-20-solid"
@@ -41,26 +45,26 @@ defineProps<{
 			/>Tech
 		</NuxtLink>
 		<NuxtLink
-			to="/#works"
+			to="/#projects"
 			class="h-fit"
 			:class="{
 				'text-primary-text-dark hover:text-secondary-text-dark':
-					active == 'works',
-				'hover:text-primary-text-dark': active != 'works',
+					projectsActive,
+				'hover:text-primary-text-dark': !projectsActive,
 			}"
 			><Icon
 				name="heroicons:briefcase-solid"
 				size="1.5rem"
 				class="mr-2"
-			/>Works
+			/>Projects
 		</NuxtLink>
 		<NuxtLink
 			to="/#about"
 			class="h-fit"
 			:class="{
 				'text-primary-text-dark hover:text-secondary-text-dark':
-					active == 'about',
-				'hover:text-primary-text-dark': active != 'about',
+					aboutActive,
+				'hover:text-primary-text-dark': !aboutActive,
 			}"
 			><Icon
 				name="heroicons:user-solid"

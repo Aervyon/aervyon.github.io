@@ -1,13 +1,6 @@
 <!-- eslint-disable vue/html-indent -->
 <script setup>
-import {
-	reactive,
-	ref,
-	computed,
-	onMounted,
-	onBeforeUnmount,
-	watch,
-} from "vue";
+import { reactive, ref, onMounted, onBeforeUnmount, watch } from "vue";
 import { useElementVisibility } from "@vueuse/core";
 
 const displayLinks = reactive([
@@ -30,12 +23,21 @@ const displayLinks = reactive([
 const tech = ref(null);
 const intro = ref(null);
 const projects = ref(null);
+const about = ref(null);
+
+const introVisible = useElementVisibility(intro);
+const techVisibile = useElementVisibility(tech);
+const projectsVisible = useElementVisibility(projects);
+const aboutVisible = useElementVisibility(about);
+
+// Set up the little terminal-like blinking animation
 
 const name = "Aervyon";
 const title = "Software Developer";
 const titleRef = ref("");
 const nameRef = ref("A|");
 
+// Load links after we load the name & title
 const loadLinks = ref(false);
 
 let cursorInterval;
@@ -107,22 +109,7 @@ onMounted(() => loadNameSlowly());
 
 onBeforeUnmount(() => clearInterval(cursorInterval));
 
-const introVisible = useElementVisibility(intro);
-const techVisibile = useElementVisibility(tech);
-const projectsVisible = useElementVisibility(projects);
-
 const iconSize = ref("2rem");
-
-// const active = ref("intro");
-const route = useRoute();
-
-const active = computed(() => {
-	if (!route.hash) return "intro";
-	if (route.hash === "#tech") return "tech";
-	if (route.hash === "#works" || route.hash === "#projects") return "works";
-	if (route.hash === "#about") return "about";
-	return "intro";
-});
 </script>
 
 <template>
@@ -131,7 +118,7 @@ const active = computed(() => {
 			class="mx-auto mt-10 md:mt-20 lg:mt-60 2xl:mt-72 md:grid md:grid-cols-2 xl:grid-cols-3"
 		>
 			<!-- Generic Profile Information -->
-			<div id="intro" ref="intro" class="mx-auto w-fit">
+			<section id="intro" ref="intro" class="mx-auto w-fit">
 				<div class="flex md:block">
 					<img
 						src="/Aervy_Icon.png"
@@ -170,7 +157,7 @@ const active = computed(() => {
 						</a>
 					</div>
 				</Transition>
-			</div>
+			</section>
 			<div class="mx-auto w-fit mt-10 md:my-auto">
 				<div class="w-fit font-mono">
 					<div class="flex mb-2">
@@ -214,73 +201,15 @@ const active = computed(() => {
 			</div>
 			<!-- Basically a table of contents. For now we hide it on mobile -->
 			<!-- Will be sticky eventually -->
-			<div
-				class="hidden w-fit xl:flex flex-col h-fit p-4 border-4 border-aervyon rounded-lg bg-[#162C33] text-lg font-mono shadow-lg shadow-black"
-				:class="{
-					'fixed right-52 top-96': !introVisible,
-					'sticky mx-auto my-auto': introVisible,
-				}"
-			>
-				<NuxtLink
-					to="/#intro"
-					class="h-fit"
-					:class="{
-						'text-primary-text-dark hover:text-secondary-text-dark':
-							introVisible,
-						'hover:text-primary-text-dark': !introVisible,
-					}"
-					><Icon
-						name="heroicons:chat-bubble-bottom-center-text-solid"
-						size="1.5rem"
-						class="mr-2"
-					/>Intro
-				</NuxtLink>
-				<NuxtLink
-					to="/#tech"
-					class="h-fit"
-					:class="{
-						'text-primary-text-dark hover:text-secondary-text-dark':
-							techVisibile,
-						'hover:text-primary-text-dark': !techVisibile,
-					}"
-					><Icon
-						name="heroicons:device-phone-mobile-20-solid"
-						size="1.5rem"
-						class="mr-2"
-					/>Tech
-				</NuxtLink>
-				<NuxtLink
-					to="/#projects"
-					class="h-fit"
-					:class="{
-						'text-primary-text-dark hover:text-secondary-text-dark':
-							projectsVisible,
-						'hover:text-primary-text-dark': !projectsVisible,
-					}"
-					><Icon
-						name="heroicons:briefcase-solid"
-						size="1.5rem"
-						class="mr-2"
-					/>Projects
-				</NuxtLink>
-				<NuxtLink
-					to="/#about"
-					class="h-fit"
-					:class="{
-						'text-primary-text-dark hover:text-secondary-text-dark':
-							active == 'active',
-						'hover:text-primary-text-dark': active != 'about',
-					}"
-					><Icon
-						name="heroicons:user-solid"
-						size="1.5rem"
-						class="mr-2"
-					/>About
-				</NuxtLink>
-			</div>
+			<Sidebar
+				:intro-active="introVisible"
+				:tech-active="techVisibile"
+				:projects-active="projectsVisible"
+				:about-active="aboutVisible"
+			/>
 		</div>
 		<!-- Tech / Languages area -->
-		<div id="tech" ref="tech">
+		<section id="tech" ref="tech">
 			<div
 				class="mx-auto mt-24 md:mt-36 lg:mt-40 xl:mt-72 2xl:mt-96 w-fit"
 			>
@@ -456,8 +385,8 @@ const active = computed(() => {
 					</div>
 				</div>
 			</div>
-		</div>
-		<div id="projects" ref="projects">
+		</section>
+		<section id="projects" ref="projects">
 			<div class="mx-auto mt-24 md:mt-36 lg:mt-40 w-fit">
 				<div class="mx-auto mt-16 lg:w-fit">
 					<div class="flex mb-4 mx-auto w-fit justify-start">
@@ -540,6 +469,171 @@ const active = computed(() => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
+		<section id="about" ref="about">
+			<div class="mx-auto mt-24 md:mt-36 lg:mt-40 w-fit">
+				<div class="mx-auto mt-16 lg:w-fit">
+					<div class="flex mb-4 mx-auto w-fit justify-start">
+						<Subtitle>About Aervy</Subtitle>
+						<a class="my-auto ml-2 text-url-dark" href="/#about"
+							><Icon name="heroicons:link-solid" size="1.5rem"
+						/></a>
+					</div>
+					<div
+						class="mt-20 text-primary-text-dark sm:grid grid-cols-2 mx-30 gap-40"
+					>
+						<div class="mx-12 lg:mx-36">
+							<h1 class="text-2xl font-bold font-mono">About</h1>
+							<h2
+								class="text-aervyon text-2xl font-bold font-mono"
+							>
+								Software Developer
+							</h2>
+							<h3 class="text-secondary-text-dark max-w-xs">
+								Undergraduate Computer Science student in the
+								U.S.
+							</h3>
+						</div>
+						<div class="mx-12 my-auto max-w-prose mt-12 md:mt-0">
+							<h2 class="text-xl lg:text-2xl w-fit">
+								What have I been doing all this time?
+							</h2>
+							<p
+								class="text-lg my-auto text-secondary-text-dark mt-2"
+							>
+								I've been devloping
+								<span class="text-accent"
+									>frontends and APIs</span
+								>
+								for the last 6 years.
+							</p>
+							<p class="text-lg my-auto text-secondary-text-dark">
+								I started with Discord bots in 2018, then moved
+								onto services, APIs, and frontends as they
+								offered
+								<span class="text-accent">more challenge.</span>
+							</p>
+							<h2 class="mt-8 text-xl lg:text-2xl w-fit">
+								I'm currently learning...
+							</h2>
+							<ul
+								class="text-lg mx-auto text-secondary-text-dark mt-2"
+							>
+								<li>
+									<Icon
+										name="devicon:python"
+										size="1.5rem"
+										class="mr-2"
+									/>
+									<span class="text-accent">Python</span> -
+									For it's quick development times and ability
+									to run nearly anywhere without compilation
+								</li>
+								<li>
+									<Icon
+										name="skill-icons:golang"
+										size="1.5rem"
+										class="mr-2"
+									/>
+									<span class="text-accent">Golang</span> -
+									For it's quick development times and speed
+								</li>
+								<li>
+									<Icon
+										name="ph:file-sql"
+										size="1.5rem"
+										class="mr-2"
+									/>
+									<span class="text-accent">SQL</span> - I
+									want to expand the databases I am good at
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="mt-20 text-primary-text-dark sm:grid grid-cols-2 mx-30 gap-40"
+					>
+						<div class="mx-12 lg:mx-36">
+							<h1 class="text-2xl font-bold font-mono">About</h1>
+							<h2
+								class="text-aervyon text-2xl font-bold font-mono"
+							>
+								Design
+							</h2>
+							<h3 class="text-secondary-text-dark max-w-xs mt-2">
+								I try designing sites
+							</h3>
+						</div>
+						<div
+							class="mx-12 md:mx-0 mt-5 md:mt-0 my-auto max-w-prose w-fit"
+						>
+							<h2 class="text-xl lg:text-2xl w-fit">
+								What have I designed?
+							</h2>
+							<ul
+								class="lg:text-lg my-auto text-secondary-text-dark w-fit mt-2"
+							>
+								<li class="w-fit">
+									<a
+										href="https://github.com/Aervyon/aervyon.github.io"
+										class="text-url-dark hover:text-link-dark"
+										><Icon
+											name="mdi:github"
+											size="1.5rem"
+											class="mr-2"
+									/></a>
+									<a
+										href="https://aervyon.com"
+										class="text-url-dark hover:text-link-dark"
+										>This Site</a
+									>
+								</li>
+								<li class="w-fit">Folderr V2</li>
+								<li class="w-fit">A college club website</li>
+							</ul>
+						</div>
+					</div>
+					<div
+						class="mt-20 text-primary-text-dark sm:grid grid-cols-2 mx-30 gap-40"
+					>
+						<div class="mx-12 lg:mx-36 w-fit">
+							<h1 class="text-2xl font-bold font-mono w-fit">
+								About
+							</h1>
+							<h2
+								class="text-aervyon text-2xl font-bold font-mono w-fit"
+							>
+								Gamer
+							</h2>
+							<h3
+								class="text-secondary-text-dark max-w-xs w-fit mt-2"
+							>
+								Likes to have fun but also <b>loves</b> winning
+							</h3>
+							<p class="text-secondary-text-dark max-w-xs w-fit">
+								I like playing First Person Shooters, adventure
+								games, RPGs
+							</p>
+						</div>
+						<div
+							class="mx-12 mt-5 md:mt-0 md:mx-0 my-auto w-fit md:max-w-prose"
+						>
+							<h2 class="text-xl lg:text-2xl">
+								What games do I play?
+							</h2>
+							<ul
+								class="text-lg my-auto w-fit text-secondary-text-dark mt-2"
+							>
+								<li class="w-fit">The Outer Wilds</li>
+								<li class="w-fit">Deathloop</li>
+								<li class="w-fit">Back 4 Blood</li>
+								<li class="w-fit">Lethal Company</li>
+								<li class="w-fit">Call of Duty: MWIII</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 </template>

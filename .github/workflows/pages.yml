@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # change to ./.output/public when really ready to deploy
-          path: ./output/public
+          path: ./.output/public
   deploy:
     needs: build
     permissions:

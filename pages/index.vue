@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/html-indent -->
 <script setup>
 import { reactive, ref, onMounted, onBeforeUnmount, watch } from "vue";
-import { useElementVisibility } from "@vueuse/core";
+import { useElementVisibility, usePreferredReducedMotion } from "@vueuse/core";
 
 const displayLinks = reactive([
 	{
@@ -41,6 +41,8 @@ const nameRef = ref("A|");
 const loadLinks = ref(false);
 
 let cursorInterval;
+
+const reducedMotion = usePreferredReducedMotion();
 
 const setCursor = () => {
 	cursorInterval = setInterval(() => {
@@ -105,7 +107,15 @@ const loadNameSlowly = () => {
 	});
 };
 
-onMounted(() => loadNameSlowly());
+onMounted(() => {
+	if (reducedMotion.value === "reduce") {
+		nameRef.value = name;
+		titleRef.value = title;
+		setCursor();
+	} else {
+		loadNameSlowly();
+	}
+});
 
 onBeforeUnmount(() => clearInterval(cursorInterval));
 

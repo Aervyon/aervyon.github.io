@@ -28,7 +28,7 @@ jobs:
         env:
           NITRO_PRESET: github_pages
       - name: Upload Output
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           # change to ./.output/public when really ready to deploy
           path: ./.output/public

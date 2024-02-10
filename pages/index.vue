@@ -18,6 +18,56 @@ const displayLinks = reactive([
 	},
 ]);
 
+/*
+},
+				{
+					name: "description",
+					content:
+						"$ Aervyon. A programmer with 6 years of experience, someone who cares about security and privacy, and has experience in managing Linux servers.",
+				},
+				{ property: "og:image", content: "/OpenGraph_Hex_Glitch.png" },
+				{ name: "twitter:card", content: "summary_large_image" },
+				{ name: "theme-color", content: "#5BC7EA" },
+				{ property: "og:title", content: "Aervyon - # portfolio" },
+				{ property: "og:site_name", content: "Aervyon's Portfolio" },
+				{ property: "og:url", content: "https://aervyon.com" },
+				{
+					property: "og:description",
+					content:
+						"$ Aervyon. A programmer with 6 years of experience, someone who cares about security and privacy, and has experience in managing Linux servers.",
+				},
+				*/
+
+useSeoMeta({
+	description:
+		"$ Aervyon. A programmer with 6 years of experience, someone who cares about security and privacy, and has experience in managing Linux servers.",
+	ogDescription:
+		"$ Aervyon. A programmer with 6 years of experience, someone who cares about security and privacy, and has experience in managing Linux servers.",
+	ogTitle: "Aervyon - # portfolio",
+	ogUrl: "https://aervyon.com",
+	twitterCard: "summary_large_image",
+	themeColor: "#5BC7EA",
+	ogSiteName: "Aervyon's Portfolio",
+	twitterDescription:
+		"$ Aervyon. A programmer with 6 years of experience, someone who cares about security and privacy, and has experience in managing Linux servers.",
+	twitterTitle: "Aervyon - # portfolio",
+	ogImage: "/OpenGraph_Hex_Glitch.png",
+	twitterImage: "/OpenGraph_Hex_Glitch.png",
+});
+
+useHead({
+	htmlAttrs: {
+		lang: "en",
+	},
+	link: [
+		{
+			rel: "icon",
+			type: "image/png",
+			href: "/favicon.png",
+		},
+	],
+});
+
 // SETUP for the sidebar
 
 const tech = ref(null);

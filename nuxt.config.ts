@@ -26,7 +26,7 @@ export default defineNuxtConfig({
 	},
 	app: {
 		head: {
-			title: "Aervyon - # whoami",
+			title: "Aervyon - # profolio",
 			meta: [
 				{ charset: "utf-8" },
 				{
@@ -34,13 +34,21 @@ export default defineNuxtConfig({
 					content: "width=device-width, initial-scale=1",
 				},
 				{
-					hid: "description",
 					name: "description",
 					content:
-						"$ aervyon info\nprogrammer, gamer, student, more...",
+						"$ Aervyon. A programmer with 6 years of experience, someone who cares about security and privacy, and has experience in managing Linux servers.",
 				},
-				{ name: "og:image", content: "/Aervy_Icon.png" },
-				{ name: "theme-color", content: "#66C8FF" },
+				{ property: "og:image", content: "/OpenGraph_Hex_Glitch.png" },
+				{ name: "twitter:card", content: "summary_large_image" },
+				{ name: "theme-color", content: "#5BC7EA" },
+				{ property: "og:title", content: "Aervyon - # portfolio" },
+				{ property: "og:site_name", content: "Aervyon's Portfolio" },
+				{ property: "og:url", content: "https://aervyon.com" },
+				{
+					property: "og:description",
+					content:
+						"$ Aervyon. A programmer with 6 years of experience, someone who cares about security and privacy, and has experience in managing Linux servers.",
+				},
 			],
 			link: [
 				{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" },

@@ -35,6 +35,7 @@ const size = ref("10rem");
 			:class="logoPadding ? 'p-4' : ''"
 			:src="iconUrl"
 			class="w-20 md:w-30 lg:w-40"
+			loading="lazy"
 		/>
 		<div
 			class="ml-10 my-auto font-bold"

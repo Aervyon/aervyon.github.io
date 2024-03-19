@@ -15,7 +15,7 @@
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@vueuse/nuxt": "^10.7.2",
     "aos": "^2.3.4",
-    "nuxt": "^3.10.1"
+    "nuxt": "^3.11.1"
   },
   "devDependencies": {
     "@iconify-json/heroicons": "^1.1.19",

@@ -56,6 +56,12 @@ export default defineNuxtConfig({
 			],
 		},
 	},
+	postcss: {
+		plugins: {
+			tailwindcss: {},
+			autoprefixer: {},
+		}
+	}
 });
 
 /* export const secondary = {

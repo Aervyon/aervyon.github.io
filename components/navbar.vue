@@ -67,7 +67,7 @@ const urls = reactive([
 				<li v-for="url in urls" :key="url.name">
 					<NuxtLink
 						:to="url.url"
-						class="hover:text-url-dark underline"
+						class="hover:text-url-dark underline-offset-2 underline"
 					>
 						<span class="block py-1 px-3">
 							{{ url.name }}

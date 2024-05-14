@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
 	<div
-		class="hidden w-fit xl:flex flex-col h-fit p-4 border-4 border-aervyon rounded-lg bg-[#162C33] text-lg font-mono shadow-lg shadow-black"
+		class="underline underline-offset-2 hidden w-fit xl:flex flex-col h-fit p-4 border-4 border-aervyon rounded-lg bg-[#162C33] text-lg font-mono shadow-lg shadow-black"
 		:class="{
 			'fixed right-52 top-96': !introActive,
 			'sticky mx-auto my-auto': introActive,

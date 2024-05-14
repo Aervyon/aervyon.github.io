@@ -4,7 +4,6 @@ defineProps<{
 	techActive: boolean;
 	projectsActive: boolean;
 	aboutActive: boolean;
-	active: string;
 }>();
 </script>
 

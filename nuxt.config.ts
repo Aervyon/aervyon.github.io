@@ -60,8 +60,8 @@ export default defineNuxtConfig({
 		plugins: {
 			tailwindcss: {},
 			autoprefixer: {},
-		}
-	}
+		},
+	},
 });
 
 /* export const secondary = {

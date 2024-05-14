@@ -644,7 +644,7 @@ const iconSize = ref("2rem");
 									/></a>
 									<a
 										href="https://aervyon.com"
-										class="text-url-dark hover:text-link-dark underline"
+										class="text-url-dark hover:text-link-dark underline underline-offset-2"
 										>This Site</a
 									>
 								</li>

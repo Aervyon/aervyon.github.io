@@ -462,6 +462,7 @@ const iconSize = ref("2rem");
 						<ProjectCard
 							:roles="['Lead', 'designer']"
 							icon-url="/folderr-icon.svg"
+							repository="https://github.com/Folderr/Folderr"
 							icon-alt="A simple vibrant green folder outline in a black box, the folder has a semi-transparent green fill"
 							name="Folderr/Folderr"
 							:dark-font="false"
@@ -684,11 +685,11 @@ const iconSize = ref("2rem");
 							<ul
 								class="text-lg my-auto w-fit text-secondary-text-dark mt-2"
 							>
-								<li class="w-fit">The Outer Wilds</li>
-								<li class="w-fit">Deathloop</li>
-								<li class="w-fit">Back 4 Blood</li>
-								<li class="w-fit">Lethal Company</li>
-								<li class="w-fit">Call of Duty: MWIII</li>
+								<li class="w-fit">Once Human</li>
+								<li class="w-fit">Sea of Thieves</li>
+								<li class="w-fit">XDefiant</li>
+								<li class="w-fit">Dark Souls 3</li>
+								<li class="w-fit">Call of Duty: MWII</li>
 							</ul>
 						</div>
 					</div>

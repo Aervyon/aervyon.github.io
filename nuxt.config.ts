@@ -3,21 +3,19 @@ import { defineNuxtConfig } from "nuxt/config";
 export default defineNuxtConfig({
 	compatibilityDate: "2024-10-01",
 	modules: [
-		[
-			"@nuxtjs/eslint-module",
-			{
-				include: [
-					"**/*.{js,ts,vue}",
-					"*.{js,ts,vue}",
-					"**/**/*.{js,ts,vue}",
-				],
-				exclude: ["_pages/.*", "_layouts/"],
-			},
-		],
+		"@nuxt/eslint",
 		"@vueuse/nuxt",
 		"@nuxtjs/tailwindcss",
 		"nuxt-icon-tw",
 	],
+	eslint: {
+		include: [
+			"**/*.{js,ts,vue}",
+			"*.{js,ts,vue}",
+			"**/**/*.{js,ts,vue}",
+		],
+		exclude: ["_pages/.*", "_layouts/"],
+	},
 	devtools: {
 		enabled: true,
 

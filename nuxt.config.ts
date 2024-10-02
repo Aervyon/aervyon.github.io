@@ -8,17 +8,8 @@ export default defineNuxtConfig({
 		"@nuxtjs/tailwindcss",
 		"nuxt-icon-tw",
 	],
-	eslint: {
-		include: [
-			"**/*.{js,ts,vue}",
-			"*.{js,ts,vue}",
-			"**/**/*.{js,ts,vue}",
-		],
-		exclude: ["_pages/.*", "_layouts/"],
-	},
 	devtools: {
 		enabled: true,
-
 		timeline: {
 			enabled: true,
 		},

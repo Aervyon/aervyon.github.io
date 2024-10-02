@@ -7,8 +7,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint:js": "eslint --ignore-path .gitignore .",
-    "lint:js:fix": "eslint --fix --ignore-path .gitignore .",
+    "lint:js": "eslint .",
+    "lint:js:fix": "eslint --fix .",
     "lint": "npm run lint:js"
   },
   "dependencies": {
@@ -23,8 +23,7 @@
     "@iconify-json/heroicons": "^1.2.0",
     "@nuxt/eslint": "^0.5.7",
     "@nuxt/eslint-config": "^0.5.7",
-    "@nuxtjs/eslint-module": "^4.1.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.11.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.10.0",

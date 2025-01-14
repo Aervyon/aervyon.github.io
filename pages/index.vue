@@ -7,14 +7,20 @@ const displayLinks = reactive([
 	{
 		icon: "mdi:github",
 		url: "https://github.com/Aervyon",
+		iconAlt: "Github Icon. An octocat",
+		title: "My Github",
 	},
 	{
 		icon: "heroicons:envelope-solid",
 		url: "mailto:aervy@aervyon.com",
+		iconAlt: "Envelope Icon",
+		title: "Email me",
 	},
 	{
 		icon: "mdi:twitter",
 		url: "https://twitter.com/Aervyon",
+		iconAlt: "Twitter Icon, a vectorized bird",
+		title: "My Twitter (18+)",
 	},
 ]);
 
@@ -111,7 +117,7 @@ const loadTitleSlowly = () => {
 	}, 50);
 	let cleared = false;
 	watch(titleRef, () => {
-		if (titleRef.value?.length > title.length && !cleared) {
+		if (titleRef.value?.length >= title.length && !cleared) {
 			clearInterval(interval);
 			cleared = true;
 			loadLinks.value = true;
@@ -149,9 +155,11 @@ onMounted(() => {
 		document.getElementById("mytitle").id = "title";
 		return;
 	} else {
-		nameRef.value = "";
-		titleRef.value = "";
-		loadNameSlowly();
+		setTimeout(() => {
+			nameRef.value = "";
+			titleRef.value = "";
+			loadNameSlowly();
+		}, 100);
 	}
 });
 
@@ -170,6 +178,7 @@ const iconSize = ref("2rem");
 				<div class="flex md:block">
 					<img
 						src="/Aervy_Icon.png"
+						alt="Aervyon's Icon, a face of a male elf with white and blue hair, glowing blue eyes, surrounded by lightning."
 						class="w-20 h-20 md:w-32 md:h-32 lg:w-32 lg:h-32 xl:w-40 xl:h-40 mt-auto rounded-full lg:my-0 mr-4 lg:mr-0"
 					/>
 					<div>
@@ -191,6 +200,7 @@ const iconSize = ref("2rem");
 				<Transition
 					enter-from-class="opacity-0"
 					enter-active-class="transition duration-300"
+					enter-to-class="opacity-100"
 				>
 					<div
 						v-if="loadLinks"
@@ -201,9 +211,15 @@ const iconSize = ref("2rem");
 							:key="link.icon"
 							:href="link.url"
 							class="hover:text-link-dark px-2.5"
+							:title="link.title"
 						>
 							<!-- Icon Size feels like a patch for now -->
-							<Icon :name="link.icon" :size="iconSize" />
+							<Icon
+								:name="link.icon"
+								:size="iconSize"
+								:alt="link.iconAlt"
+							/>
+							<span class="sr-only">{{ link.title }}</span>
 						</a>
 					</div>
 				</Transition>

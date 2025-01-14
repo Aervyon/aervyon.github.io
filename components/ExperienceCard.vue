@@ -40,7 +40,7 @@ const formatDate = (duration: number): string => {
 			}"
 		/>
 		<div
-			class="ml-10 text-2xl my-auto font-bold"
+			class="ml-10 text-xl md:text-2xl my-auto font-bold"
 			:class="{
 				'text-primary-text-dark': !darkFont,
 				'text-primary-dark': darkFont,
@@ -50,7 +50,7 @@ const formatDate = (duration: number): string => {
 				<h1>{{ title }}</h1>
 			</div>
 			<div>
-				<p class="text-lg font-semibold">
+				<p class="text-sm md:text-lg font-semibold">
 					{{
 						!duration
 							? formatDate(Date.now() - Number(start))

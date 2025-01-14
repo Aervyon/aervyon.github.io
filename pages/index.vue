@@ -218,22 +218,22 @@ const iconSize = ref("2rem");
 					</div>
 				</Transition>
 			</section>
-			<div class="mx-auto w-fit mt-10 md:my-auto">
-				<div class="w-fit font-mono">
+			<div class="w-dvw md:w-fit md:mx-auto mt-10 md:my-auto">
+				<div class="mx-2 md:mx-0 font-mono w-fit max-w-prose">
 					<div class="flex mb-2">
-						<Subtitle class="w-max">Intro</Subtitle>
+						<Subtitle>Intro</Subtitle>
 						<a class="ml-2 my-auto text-url-dark" href="/#intro"
 							><Icon name="heroicons:link-solid" size="1.5rem"
 						/></a>
 					</div>
-					<p class="text-xl lg:text-2xl w-max">I've been</p>
+					<p class="text-xl lg:text-2xl">I've been</p>
 					<h1
-						class="text-primary-text-dark text-2xl lg:text-4xl w-max"
+						class="text-primary-text-dark text-2xl lg:text-4xl max-w-lg"
 					>
 						developing software that is
-					</h1>
-					<h1 class="text-aervyon w-max text-2xl lg:text-4xl">
-						privacy conscious and easy<br />to use
+						<span class="text-aervyon">
+							privacy conscious and easy to use
+						</span>
 						<span class="text-secondary-text-dark">since 2018</span>
 					</h1>
 				</div>
@@ -541,9 +541,9 @@ const iconSize = ref("2rem");
 						/></a>
 					</div>
 					<div
-						class="mt-20 text-primary-text-dark sm:grid grid-cols-2 mx-30 gap-40"
+						class="mt-20 text-primary-text-dark sm:grid grid-cols-2 gap-40"
 					>
-						<div class="mx-12 lg:mx-36">
+						<div class="mx-6 lg:mx-36">
 							<h1 class="text-2xl font-bold font-mono">About</h1>
 							<h2
 								class="text-aervyon text-2xl font-bold font-mono"
@@ -555,7 +555,9 @@ const iconSize = ref("2rem");
 								U.S.
 							</h3>
 						</div>
-						<div class="mx-12 my-auto max-w-prose mt-12 md:mt-0">
+						<div
+							class="my-auto mx-6 md:mx-0 max-w-prose mt-12 md:mt-0"
+						>
 							<h2 class="text-xl lg:text-2xl w-fit">
 								What have I been doing all this time?
 							</h2>
@@ -612,9 +614,9 @@ const iconSize = ref("2rem");
 						</div>
 					</div>
 					<div
-						class="mt-20 text-primary-text-dark sm:grid grid-cols-2 mx-30 gap-40"
+						class="mt-14 text-primary-text-dark sm:grid grid-cols-2 mx-30 gap-40"
 					>
-						<div class="mx-12 lg:mx-36">
+						<div class="mx-6 lg:mx-36">
 							<h1 class="text-2xl font-bold font-mono">About</h1>
 							<h2
 								class="text-aervyon text-2xl font-bold font-mono"
@@ -626,7 +628,7 @@ const iconSize = ref("2rem");
 							</h3>
 						</div>
 						<div
-							class="mx-12 md:mx-0 mt-5 md:mt-0 my-auto max-w-prose w-fit"
+							class="mx-6 md:mx-0 mt-5 md:mt-0 my-auto max-w-prose w-fit"
 						>
 							<h2 class="text-xl lg:text-2xl w-fit">
 								What have I designed?
@@ -655,9 +657,9 @@ const iconSize = ref("2rem");
 						</div>
 					</div>
 					<div
-						class="mt-20 text-primary-text-dark sm:grid grid-cols-2 mx-30 gap-40"
+						class="mt-14 text-primary-text-dark sm:grid grid-cols-2 mx-30 gap-40"
 					>
-						<div class="mx-12 lg:mx-36 w-fit">
+						<div class="mx-6 lg:mx-36 w-fit">
 							<h1 class="text-2xl font-bold font-mono w-fit">
 								About
 							</h1>
@@ -677,7 +679,7 @@ const iconSize = ref("2rem");
 							</p>
 						</div>
 						<div
-							class="mx-12 mt-5 md:mt-0 md:mx-0 my-auto w-fit md:max-w-prose"
+							class="mx-6 mt-5 md:mt-0 md:mx-0 my-auto w-fit md:max-w-prose"
 						>
 							<h2 class="text-xl lg:text-2xl">
 								What games do I play?

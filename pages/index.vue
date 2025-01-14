@@ -84,8 +84,8 @@ const aboutVisible = useElementVisibility(about);
 
 const name = "Aervyon";
 const title = "Software Developer";
-const titleRef = ref("");
-const nameRef = ref("A|");
+const titleRef = ref("Software Developer");
+const nameRef = ref("Aervyon");
 
 // Load links after we load the name & title
 const loadLinks = ref(false);
@@ -94,40 +94,25 @@ let cursorInterval;
 
 const reducedMotion = usePreferredReducedMotion();
 
-const setCursor = () => {
-	cursorInterval = setInterval(() => {
-		if (titleRef.value.endsWith("|")) {
-			titleRef.value = titleRef.value.replace("|", "");
-		} else {
-			titleRef.value = titleRef.value + "|";
-		}
-	}, 1000);
-};
-
+// Typewriter Effect
 const loadTitleSlowly = () => {
+	document.getElementById("mytitle").id = "title";
 	const interval = setInterval(() => {
 		// if len <= name length - 1
 		// assume cursor
 		// replace cursor
-		let len = titleRef.value.length - 1;
-		if (len === 0) {
-			len = 1;
+		let len = titleRef.value.length;
+		if (len < 0) {
+			len = 0;
 		}
-		if (!titleRef.value) {
-			titleRef.value = "S";
-		} else if (
-			len <= title.length - 1 &&
-			titleRef.value[len] !== title[len]
-		) {
-			titleRef.value = titleRef.value.replace("|", title[len]);
-			titleRef.value = titleRef.value + "|";
+		if (len <= title.length - 1 && titleRef.value[len] !== title[len]) {
+			titleRef.value += title[len];
 		}
 	}, 50);
 	let cleared = false;
 	watch(titleRef, () => {
 		if (titleRef.value?.length > title.length && !cleared) {
 			clearInterval(interval);
-			setCursor();
 			cleared = true;
 			loadLinks.value = true;
 		}
@@ -135,34 +120,37 @@ const loadTitleSlowly = () => {
 };
 
 const loadNameSlowly = () => {
+	document.getElementById("myname").id = "name";
 	const interval = setInterval(() => {
 		// if len <= name length - 1
 		// assume cursor
 		// replace cursor
 		console.log("Loading name slowly");
-		const len = nameRef.value.length - 1;
+		const len = nameRef.value.length;
 		if (len <= name.length - 1 && nameRef.value[len] !== name[len]) {
-			nameRef.value = nameRef.value.replace("|", name[len]);
-			nameRef.value = nameRef.value + "|";
+			nameRef.value = nameRef.value += name[len];
 		}
-	}, 50);
+	}, 100);
 	let cleared = false;
 	watch(nameRef, () => {
-		if (nameRef.value?.length > name.length && !cleared) {
-			nameRef.value = nameRef.value.replace("|", "");
+		console.log(nameRef.value?.length, name.length);
+		if (nameRef.value?.length >= name.length && !cleared) {
 			clearInterval(interval);
 			loadTitleSlowly();
 			cleared = true;
+			nameRef.value = name;
+			document.getElementById("name").id = "";
 		}
 	});
 };
 
 onMounted(() => {
 	if (reducedMotion.value === "reduce") {
-		nameRef.value = name;
-		titleRef.value = title;
-		setCursor();
+		document.getElementById("mytitle").id = "title";
+		return;
 	} else {
+		nameRef.value = "";
+		titleRef.value = "";
 		loadNameSlowly();
 	}
 });
@@ -186,11 +174,13 @@ const iconSize = ref("2rem");
 					/>
 					<div>
 						<h1
+							id="myname"
 							class="w-fit text-aervyon font-bold text-3xl md:text-4xl xl:text-5xl md:mt-2 text-shadow shadow-black"
 						>
 							{{ nameRef }}
 						</h1>
 						<h2
+							id="mytitle"
 							class="mt-1 md:mt-2 text-xl md:text-2xl xl:text-3xl text-primary-text-dark w-max text-shadow shadow-aervyon font-bold"
 						>
 							{{ titleRef }}
@@ -700,3 +690,42 @@ const iconSize = ref("2rem");
 		</section>
 	</div>
 </template>
+
+<style>
+#name:after {
+	content: "|";
+	animation: blink 500ms linear 7 alternate;
+}
+
+#title:after {
+	content: "|";
+	animation: blink 500ms linear infinite alternate;
+}
+
+@-webkit-keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+</style>

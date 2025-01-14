@@ -16,7 +16,7 @@ export default defineNuxtConfig({
 	},
 	app: {
 		head: {
-			title: "Aervyon - # profolio",
+			title: "Aervyon - # portfolio",
 			meta: [
 				{ charset: "utf-8" },
 				{
